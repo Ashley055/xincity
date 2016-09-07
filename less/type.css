@@ -1,0 +1,1162 @@
+@charset "utf-8";
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  color: #555;
+  background: #e5e5e5;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,
+button,
+input,
+select,
+textarea {
+  font: 500 14px/1.8 Lucida, Verdana, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+/* IE6 Button 宽度自适应 */
+button,
+input {
+  *width: auto;
+  *overflow: visible;
+}
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* IE bug fixed: th 不继承 text-align*/
+th {
+  text-align: inherit;
+}
+/* 去除默认边框 */
+fieldset,
+img {
+  border: 0;
+}
+/* 解决 IE6-7 图片缩放锯齿问题 */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display: block;
+}
+/* 块/段落引用 */
+blockquote {
+  margin: 1em 4em 1em 2em;
+  padding: 0.6em 1em;
+  background: #f1f1f1;
+}
+blockquote blockquote {
+  padding: 0 0 0 1em;
+  margin-left: 2em;
+  border-left: 0.4em solid #ddd;
+}
+/* Firefox 以外，元素没有下划线，需添加 */
+acronym,
+abbr {
+  border-bottom: 1px dotted;
+  font-variant: normal;
+}
+/* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
+abbr {
+  cursor: help;
+}
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 400;
+}
+/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
+ul,
+ol {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption,
+th {
+  text-align: left;
+}
+q:before,
+q:after {
+  content: '';
+}
+/* 统一上标和下标 */
+:root sub,
+:root sup {
+  vertical-align: baseline;
+  /* for ie9 and other mordern browsers */
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* 让链接在 hover 状态下显示下划线 */
+/* 默认不显示下划线，保持页面简洁 */
+ins,
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* 专名号：虽然 u 已经重回 html5 Draft，但在所有浏览器中都是可以使用的，
+ * 要做到更好，向后兼容的话，添加 class="typo-u" 来显示专名号
+ * 关于 <u> 标签：http://www.whatwg.org/specs/web-apps/current-work/multipage/text-level-semantics.html#the-u-element
+ * 被放弃的是 4，之前一直搞错 http://www.w3.org/TR/html401/appendix/changes.html#idx-deprecated
+ * 一篇关于 <u> 标签的很好文章：http://html5doctor.com/u-element/
+ */
+u,
+.typo-u {
+  text-decoration: underline;
+}
+/* 标记，类似于手写的荧光笔的作用 */
+mark {
+  background: #fffdd1;
+}
+/* 代码片断 */
+pre,
+code {
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+pre {
+  border: 1px solid #ddd;
+  border-left-width: 0.4em;
+  background: #fbfbfb;
+  padding: 10px;
+}
+/* 底部印刷体、版本等标记 */
+small {
+  font-size: 12px;
+  color: #888;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+/* 保证块/段落之间的空白隔行 */
+.typo p,
+.typo pre,
+.typo ul,
+.typo ol,
+.typo dl,
+.typo form,
+.typo hr,
+.typo table,
+.typo-p,
+.typo-pre,
+.typo-ul,
+.typo-ol,
+.typo-dl,
+.typo-form,
+.typo-hr,
+.typo-table {
+  margin-bottom: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  font-weight: 800\9;
+  color: #333;
+}
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
+.typo h1,
+.typo h2,
+.typo h3,
+.typo h4,
+.typo h5,
+.typo h6,
+.typo-h1,
+.typo-h2,
+.typo-h3,
+.typo-h4,
+.typo-h5,
+.typo-h6 {
+  margin-bottom: 0.4em;
+  line-height: 1.5;
+}
+.typo h1,
+.typo-h1 {
+  font-size: 1.8em;
+}
+.typo h2,
+.typo-h2 {
+  font-size: 1.6em;
+}
+.typo h3,
+.typo-h3 {
+  font-size: 1.4em;
+}
+.typo h4,
+.typo-h4 {
+  font-size: 1.2em;
+}
+.typo h5,
+.typo h6,
+.typo-h5,
+.typo-h6 {
+  font-size: 1em;
+}
+/* 在文章中，应该还原 ul 和 ol 的样式 */
+.typo ul,
+.typo-ul {
+  margin-left: 1.3em;
+  list-style: disc;
+}
+.typo ol,
+.typo-ol {
+  list-style: decimal;
+  margin-left: 1.9em;
+}
+.typo li ul,
+.typo li ol,
+.typo-ul ul,
+.typo-ul ol,
+.typo-ol ul,
+.typo-ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 2em;
+}
+.typo li ul,
+.typo-ul ul,
+.typo-ol ul {
+  list-style: circle;
+}
+/* 同 ul/ol，在文章中应用 table 基本格式 */
+.typo table th,
+.typo table td,
+.typo-table th,
+.typo-table td {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+}
+.typo table th,
+.typo-table th {
+  background: #fbfbfb;
+}
+.typo table thead th,
+.typo-table thead th {
+  background: #f1f1f1;
+}
+/* 去除 webkit 中 input 和 textarea 的默认样式  */
+.typo-input,
+.typo-textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+/* TODO: 供着重号使用 */
+.typo-em,
+.typo em {
+  font-weight: 700;
+}
+/* TODO: 供首字下沉使用 */
+.typo-first {
+  position: absolute;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  /* For some Androids */
+  outline: none;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #ccc;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #ccc;
+}
+input:-webkit-input-placeholder,
+textarea:-webkit-input-placeholder {
+  color: #ccc;
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="input"] {
+  -webkit-appearance: none;
+}
+select {
+  -webkit-appearance: none!important;
+  border-radius: 0;
+  -webkit-appearance: menulist;
+  -webkit-box-sizing: border-box;
+  -webkit-box-align: center;
+  border: 1px solid;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
+  background-color: white;
+  cursor: default;
+}
+/* 结构类common */
+#html {
+  font-size: 20px;
+}
+.container {
+  width: 100%;
+  max-width: 540px;
+  min-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row {
+  position: relative;
+}
+.rowG {
+  padding: 0 0.5rem 0 1rem !important;
+}
+.row20 {
+  padding: 0 0.5rem 0 0.5rem !important;
+}
+/* 基类样式 shadow */
+.shadow {
+  -moz-box-shadow: 0px 2px 2px #e7e7e7;
+  -webkit-box-shadow: 0px 2px 2px #e7e7e7;
+  box-shadow: 0px 2px 2px #e7e7e7;
+}
+/* 图标等图片垂直居中后的处理 */
+.top1 {
+  position: relative;
+  top: -0.05rem;
+}
+.renQ {
+  color: #f3484a!important;
+}
+.redS {
+  color: #e14041!important;
+}
+.cor999 {
+  color: #999 !important;
+}
+.cor555 {
+  color: #555 !important;
+}
+.cor333 {
+  color: #333 !important;
+}
+.corbbb {
+  color: #bbb !important;
+}
+.coraaa {
+  color: #aaa !important;
+}
+.Cgray {
+  color: #aaa!important;
+}
+.width100 {
+  width: 100%;
+}
+.width66 {
+  width: 66.37%;
+}
+.width33 {
+  width: 33%;
+}
+.Contcenter {
+  text-align: center;
+}
+.borLeft {
+  border-left: 1px #e5e5e5 solid;
+}
+.borBottom {
+  border-bottom: 1px #e5e5e5 solid;
+}
+.borTop {
+  border-top: 1px #e5e5e5 solid;
+}
+.borRight {
+  border-right: 1px #e5e5e5 solid;
+}
+.border {
+  border: 1px #e5e5e5 solid;
+}
+.originalPrice {
+  text-decoration: line-through;
+}
+.noborder {
+  border: none !important;
+}
+.noborR {
+  border-right: none !important;
+}
+.nobg {
+  background: none!important;
+}
+.fl-l {
+  float: left ;
+}
+.fl-r {
+  float: right;
+}
+/*通用变量*/
+.fz30 {
+  font-size: 0.75rem !important;
+}
+.mt30 {
+  margin-top: 0.75rem !important;
+}
+.mt35 {
+  margin-top: 0.85rem !important;
+}
+/* 全局：动画变动效果 */
+.datetime {
+  width: 6rem!important;
+  line-height: 1.2rem!important;
+  height: 1.2rem!important;
+  position: absolute;
+  right: -0.5rem;
+  border-radius: 0!important;
+  color: #333!important;
+  border-bottom: 1px solid #ddd!important;
+  -webkit-appearance: none!important;
+}
+#set_time,
+#set_time2,
+#blood_type {
+  border: 0;
+  width: 6rem!important;
+  text-align: right;
+  font-size: 0.8rem !important;
+  height: 1.2rem!important;
+  border-radius: 0;
+  -webkit-appearance: none!important;
+}
+#set_time {
+  border: 0;
+  width: 6rem!important;
+  font-size: 0.7rem !important;
+  text-align: right;
+  line-height: 1.2rem!important;
+  height: 1.2rem!important;
+  position: relative;
+  color: #333;
+  top: -0.3rem;
+  text-indent: .7rem;
+  border-radius: 0;
+}
+.selectBg {
+  background: url("../css/img/jt.png") no-repeat right center;
+  background-size: 0.375rem;
+}
+.timeD {
+  font-size: 0.7rem !important;
+  color: #333;
+  border: none !important;
+}
+.mt20 {
+  margin-top: 0.5rem !important;
+}
+.mt10 {
+  margin-top: 0.4rem !important;
+}
+#set_time2 {
+  border: 0;
+  width: 3rem!important;
+  font-size: 0.8rem !important;
+  line-height: 1.2rem!important;
+  height: 1.2rem!important;
+  background: #fff;
+  position: relative;
+  top: -0.3rem;
+  border-bottom: 1px solid #ddd!important;
+}
+#blood_value {
+  border: 0;
+  text-align: right;
+  font-size: 0.8rem !important;
+  width: 5rem;
+}
+.radio {
+  position: relative;
+  top: -0.2rem;
+}
+/* index css */
+.noActive {
+  color: #ccc;
+}
+span {
+  color: #333;
+  position: relative;
+}
+.radio {
+  width: .8rem;
+  height: .8rem;
+  position: relative;
+  top: .04rem;
+}
+.list-ul {
+  display: box;
+  margin: 0 0.5rem !important;
+  display: -webkit-box;
+}
+.list-ul li {
+  margin-bottom: .2rem;
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  font-size: 0.75rem !important;
+}
+.list-ul .active {
+  background: #3d86ff !important;
+  border: 1px #3d86ff solid !important;
+  color: #fff !important;
+}
+.list-ul .Yn {
+  width: 3rem;
+  height: 1.15rem;
+  background: #fff;
+  margin-left: .3rem;
+  line-height: 1.15rem;
+  font-size: 0.6rem !important;
+  color: #afafaf;
+  text-align: center;
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+.text {
+  padding: 0 3%;
+  width: 93.3%;
+  margin-top: 0.5rem !important;
+  border: none;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  -webkit-appearance: none!important;
+  border-radius: 0;
+  height: 4.4rem;
+}
+.info .yzm {
+  width: 9rem;
+  height: 2.1rem;
+  border: 1px solid #ccc;
+  -webkit-appearance: none!important;
+  text-indent: .3rem;
+}
+.info .yzm-btn {
+  display: inline-block;
+  width: 5.5rem;
+  background: #70dbdb;
+  text-align: center;
+  height: 2.1rem;
+  vertical-align: bottom;
+  border-radius: .2rem;
+  color: #fff;
+  font-size: 0.75rem !important;
+  line-height: 2.1rem;
+}
+.info .yzm-btn:active {
+  background: #40cccc;
+}
+.info .UserInput {
+  margin: 0 0.5rem !important;
+  margin-top: 0.75rem !important;
+}
+.info .UserInput input {
+  width: 100%;
+  height: 2.1rem;
+  border: 1px solid #ccc;
+  text-indent: .3rem;
+  color: #999;
+  -webkit-appearance: none!important;
+}
+.info .UserInput .name {
+  border-radius: .2rem .2rem 0 0;
+}
+.info .UserInput .phone {
+  border-radius: 0 0 .2rem .2rem;
+  border-top: none;
+}
+.info input {
+  border: 0;
+  font-size: 0.8rem !important;
+}
+.info .p1 {
+  font-size: 0.75rem !important;
+  text-align: center;
+}
+.info .bd {
+  margin-top: 1.05rem !important;
+  background: #fff;
+}
+.info .bd p {
+  font-size: 0.8rem !important;
+  margin-left: 1rem !important;
+  margin-right: 0.5rem !important;
+  padding: 0.6rem 0;
+  color: #999;
+}
+.info .bd span {
+  color: #333;
+}
+.info .ft {
+  margin-top: 1.05rem !important;
+  background: #fff;
+}
+.info .ft p {
+  font-size: 0.8rem !important;
+  margin-left: 1rem !important;
+  margin-right: 0.5rem !important;
+  padding: 0.6rem 0;
+  color: #999;
+}
+.info .ft span {
+  color: #333;
+}
+.info .ft .noActive {
+  color: #ccc;
+}
+/* 记录血糖 */
+.xuetan .hd {
+  background: #fff;
+  padding-top: 0.65rem !important;
+  padding-bottom: 0.65rem !important;
+}
+.xuetan .bd {
+  background: #fff;
+  margin-top: 1rem !important;
+}
+.xuetan .bd p {
+  color: #999;
+  padding: 0.6rem 0;
+  font-size: 0.8rem;
+}
+.xuetan .bd .clzhi {
+  margin-top: .53rem;
+}
+.xuetan .bd .clzhi .Minp {
+  font-size: 0.5rem !important;
+  color: #ccc;
+  padding-bottom: .53rem!important;
+}
+.xuetan .bd .clzhi p {
+  padding: 0 !important;
+  line-height: .9rem;
+  font-size: 0.75rem !important;
+}
+.btn {
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+  display: block;
+  background: #3d86ff;
+  color: #fff;
+  font-size: 0.9rem !important;
+  text-align: center;
+  border-radius: .2rem;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+.btn:active {
+  background: #2874f3;
+}
+/* 我的资料 */
+.userinfo input {
+  border: 0;
+  text-align: right;
+  font-size: 0.8rem !important;
+}
+.userinfo .hd {
+  background: #fff;
+  padding-top: 0.65rem !important;
+  padding-bottom: 0.65rem !important;
+}
+.userinfo .hd .p1 {
+  padding-left: 0.5rem;
+  font-size: 0.75rem !important;
+  color: #333;
+  line-height: 1rem;
+  width: 11rem;
+  margin-top: 1rem;
+}
+.userinfo .bd {
+  margin-top: 1.05rem !important;
+  background: #fff;
+}
+.userinfo .bd p {
+  font-size: 0.8rem !important;
+  margin-left: 1rem !important;
+  margin-right: 0.5rem !important;
+  padding: 0.6rem 0;
+  color: #999;
+}
+.userinfo .bd span {
+  color: #333;
+}
+.userinfo .ft {
+  margin-top: 1.05rem !important;
+  background: #fff;
+}
+.userinfo .ft p {
+  padding: 0.6rem 0;
+  color: #999;
+}
+.record input {
+  border: 0;
+  text-align: right;
+  font-size: 0.8rem !important;
+}
+.record .lieb {
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.9rem !important;
+}
+.record .lieb .span2 {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+.record .lieb .ci1 {
+  width: 2.577rem;
+  height: 2.577rem;
+  display: block;
+  text-align: center;
+  line-height: 2.577rem;
+  border: #ff3300 2px solid;
+  border-radius: 5rem;
+  font-size: 0.75rem !important;
+  color: #333;
+}
+.record .lieb .ci2 {
+  width: 2.577rem;
+  height: 2.577rem;
+  display: block;
+  text-align: center;
+  line-height: 2.577rem;
+  border: #66cc33 2px solid;
+  border-radius: 5rem;
+  font-size: 0.75rem !important;
+  color: #333;
+}
+.record .lieb .ci3 {
+  width: 2.577rem;
+  height: 2.577rem;
+  display: block;
+  text-align: center;
+  line-height: 2.577rem;
+  border: #3399ff 2px solid;
+  border-radius: 5rem;
+  font-size: 0.75rem !important;
+  color: #333;
+}
+.record .tablehd {
+  background: #70dbdb;
+}
+.record .tablehd table {
+  width: 100%;
+}
+.record .tablehd table .th {
+  color: #fff;
+  text-align: center;
+  border-right: 1px solid #fff;
+  margin: .2rem 0;
+}
+.record .tablebd {
+  background: #fff;
+}
+.record .tablebd table {
+  width: 100%;
+}
+.record .tablebd table .th {
+  text-align: center;
+  border-right: 1px solid #b8f2f2;
+  margin: .2rem 0;
+}
+.record .tablebd .green {
+  color: #66cc66;
+}
+.record .tablebd .red {
+  color: #ff6666;
+}
+.record .tablebd .blue {
+  color: #58d0d0;
+}
+.record .tablebd .yellow {
+  color: #f4c300;
+}
+.borb {
+  border-bottom: 1px solid #fff;
+}
+.footr {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  width: 100%;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+}
+.footr span {
+  width: 7rem;
+  display: block;
+  float: left;
+  text-align: center;
+  padding: .3rem 0;
+  border: 1px solid #4edddd;
+  color: #4edddd;
+  font-size: 0.75rem !important;
+}
+.footr .span1 {
+  border-radius: .3rem 0 0 .3rem;
+}
+.footr .span2 {
+  border-radius: 0 .3rem .3rem 0;
+}
+.footr .active {
+  background: #4edddd;
+  color: #fff;
+}
+.dw {
+  background: #fff;
+  padding-bottom: 1.5rem;
+}
+.dw .dwCont {
+  margin-top: 3.25rem;
+  width: 100%;
+  text-align: center;
+}
+.ios {
+  margin-left: .2rem;
+  width: 50%;
+}
+.ios img {
+  width: 6.625rem;
+}
+.android {
+  width: 50%;
+  margin-left: 0.5rem;
+}
+.android img {
+  width: 6.625rem;
+}
+.docchat {
+  padding: 50px 20px;
+}
+.docchat li {
+  margin-bottom: 20px;
+}
+.docchat .userimg {
+  float: left;
+}
+.docchat .docimg {
+  float: right;
+  margin-top: 25px;
+}
+.docchat .userimg img,
+.docchat .docimg img {
+  width: 50px;
+  height: auto;
+}
+.docchat .userdata,
+.docchat .docdata {
+  padding-bottom: 5px;
+}
+.docchat .usermsg {
+  margin-left: 70px;
+}
+.docchat .docmsg {
+  margin-right: 70px;
+  text-align: right;
+}
+.docchat .userchatbox {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  color: #404040;
+  border-radius: 5px;
+  background: #f3f3f3;
+  position: relative;
+}
+.docchat .userpoint1 {
+  position: absolute;
+  left: -16px;
+  top: 5px;
+  display: inline-block;
+  width: 16px;
+  height: 21px;
+  background: url(../images/point1.jpg) left top no-repeat;
+}
+.docchat .docpoint1 {
+  position: absolute;
+  right: -16px;
+  top: 5px;
+  display: inline-block;
+  width: 16px;
+  height: 21px;
+  background: url(../images/point1.jpg) left -27px no-repeat;
+}
+.docchat .docchatbox {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  border-radius: 5px;
+  background: #fff;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+}
+.docchat .username,
+.docchat .docname {
+  font-size: 14px;
+  color: #7a7a7a;
+}
+.docchat .msgtime {
+  font-size: 12px;
+  color: #a0a0a0;
+}
+.userchat {
+  padding: 40px 20px;
+}
+.userchat .msgtime span {
+  background: #cccccc;
+  padding: .12rem .25rem;
+  border-radius: .15rem;
+  color: #fff!important;
+}
+.userchat li {
+  margin-bottom: 20px;
+}
+.userchat .docimg {
+  float: left;
+  margin-top: 20px;
+}
+.userchat .userimg {
+  float: right;
+  margin-top: 20px;
+}
+.userchat .userimg img,
+.userchat .docimg img {
+  width: 38px;
+  height: auto;
+}
+.userchat .userdata,
+.userchat .docdata {
+  padding-bottom: 5px;
+}
+.userchat .docmsg {
+  margin-left: 55px;
+}
+.userchat .usermsg {
+  margin-right: 55px;
+  text-align: right;
+}
+.userchat .docchatbox {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  color: #333333;
+  border-radius: 5px;
+  background: #fff;
+  position: relative;
+  display: inline-block;
+}
+.userchat .userchatbox {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 5px;
+  background: #fff;
+  display: inline-block;
+  text-align: left;
+  position: relative;
+}
+.userchat .userpoint1 {
+  position: absolute;
+  right: -16px;
+  top: 30px;
+  display: inline-block;
+  width: 16px;
+  height: 22px;
+  background: url(../css/img/chitchat.png) no-repeat;
+  background-size: 8px;
+  z-index: 22;
+}
+.userchat .docpoint1 {
+  position: absolute;
+  left: -8px;
+  top: 30px;
+  display: inline-block;
+  width: 9px;
+  height: 22px;
+  background: url(../css/img/chitchat2.png) no-repeat;
+  background-size: 8px;
+  z-index: 33;
+}
+.userchat .username,
+.userchat .docname {
+  font-size: 14px;
+  color: #7a7a7a;
+}
+.userchat .msgtime {
+  font-size: 12px;
+  color: #a0a0a0;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.m-fs-ft {
+  border-top: 1px #dfdfdf solid;
+  padding: 8px 0;
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  background: #f3f3f3;
+  bottom: 0;
+}
+.m-fs-ft .inputft {
+  text-align: left;
+  width: 82% !important;
+  border: 1px #adadad solid;
+  margin-left: 3.3%;
+}
+.upimg-a-ft {
+  background-size: 29px;
+  width: 27px;
+  border-radius: 3px;
+  background: url('../images/img.png') no-repeat;
+  background-size: 25px;
+  height: 29px;
+  color: #fff;
+  font-size: 11px;
+  text-align: center;
+  left: 3%;
+  top: 11px;
+  position: absolute;
+}
+.tet-a-ft {
+  width: 39px;
+  height: 27px;
+  color: #999;
+  text-align: center;
+  display: block;
+  line-height: 27px;
+  border-radius: 4px;
+  margin-top: 10px;
+  background: #fff;
+  float: right;
+  margin-right: 5px;
+  font-size: 11px;
+  border: 1px solid #adadad;
+}
+.cishu-tishi {
+  text-align: center;
+  color: #44cdcd;
+  font-size: 12px;
+  padding-bottom: 8px;
+}
+.m-fs-ft a {
+  margin-top: 3px;
+}
+.ys-bt-ft {
+  position: absolute;
+  width: 93%;
+  left: 3.5%;
+  bottom: 10px;
+}
+.tishi-title {
+  font-size: 12px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+.tishi-title img {
+  display: block;
+  float: left;
+  margin-left: 22%;
+  margin-right: 5px;
+}
+.yd-tuw {
+  margin-top: 0px;
+  border-top: none;
+  margin-bottom: 5px;
+}
