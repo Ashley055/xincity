@@ -331,6 +331,49 @@ body {
   overflow: hidden;
 }
 
+.topic{
+
+  h4{
+    margin-bottom: 15px;
+    height: 27px;
+    overflow: hidden;  
+    a{
+      font-size: 20px;
+      color: #70b362;
+    }    
+  }
+  p{
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+  }
+}
+
+.pic-text{
+  img{
+    float: left;
+  }
+  dl{
+    float: left;
+    margin-left: 10px;
+    width: 200px;
+    height: 90px;
+    dt{
+      font-size: 16px;
+      color: #333;
+      line-height: 25px;
+    }
+    dd{
+      font-size: 14px;
+      color: #999;
+      line-height: 30px;
+    }
+  }
+  .last{
+    margin-top: 20px !important;
+  }
+}
+
 //头部样式
 .header{
   position: relative;
@@ -850,20 +893,7 @@ body {
     margin-right: 20px;
     width: 350px;
     float: left;
-    h4{
-      margin-bottom: 15px;
-      height: 27px;
-      overflow: hidden;  
-      a{
-        font-size: 20px;
-        color: #70b362;
-      }    
-    }
-    p{
-      font-size: 14px;
-      color: #999;
-      line-height: 20px;
-    }
+
   }
   .second{
         margin-top: 20px !important;
@@ -1213,27 +1243,11 @@ body {
     .down-middle{
       width: 335px;
       float: left;
-      img{
-        float: left;
+      .pic-text{
+        margin-top: 20px;
       }
-      dl{
-        float: left;
-        margin-left: 10px;
-        width: 200px;
-        height: 90px;
-        dt{
-          font-size: 16px;
-          color: #333;
-          line-height: 25px;
-        }
-        dd{
-          font-size: 14px;
-          color: #999;
-          line-height: 30px;
-        }
-      }
-      .last{
-        margin-top: 20px !important;
+      .pic-text:first-child{
+        margin-top: 0;
       }
     }
     .middle-right{
