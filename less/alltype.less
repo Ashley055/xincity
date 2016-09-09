@@ -505,7 +505,35 @@ body {
   }
 }
 
-//头部样式
+.flex-control-nav {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: right;
+  box-sizing: border-box;
+  padding-right: 10px;
+  li{
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    
+    overflow:hidden;
+    display: inline-block;
+    margin-right: 5px;
+    a{
+      background: #a9a9a9;
+      width: 100%;
+      height: 100%;
+      display: block;
+      font-size: 0;
+    }
+  }
+  .flex-active{
+    background: #ff6600;
+  }
+}
+
+//头部样式 jinx
 .header{
   position: relative;
   height: 35px;
@@ -731,6 +759,7 @@ body {
     width: 300px;
     float: left;
   }
+
   .main-cen{
     width: 400px;
     padding: 0 20px;
@@ -785,6 +814,25 @@ body {
 .sideber-left{
   .lunbo{
    height: 328px;
+   overflow:hidden;
+   position: relative;
+  }
+  .lubo-box{
+    position: relative;
+    height: 328px;
+    h3{
+      height: 52px;
+      background: rgba(0, 0, 0, 0.5);
+      color:#fff;
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      font-size: 16px;
+      padding: 0 15px;
+      line-height: 40px;
+      overflow:hidden;
+      box-sizing: border-box;
+    }
   }
   .gg-box{
     margin-top: 27px;
@@ -1038,10 +1086,19 @@ body {
 
   }
   .wedding{
-    float: left;
+    width: 349px;
+    height: 280px;
+    overflow: hidden;
     margin-right: 20px;
-    img{
-      position: absolute;
+    float: left;
+    position: relative;
+    .lubo-box{
+      width: 349px;
+      height: 280px;
+      position: relative;
+    }
+    .flex-control-nav{
+      bottom: 15px;
     }
   }
 
@@ -1049,8 +1106,8 @@ body {
     height: 50px;
     width: 349px;
     background: #391e11;
-    position: relative;
-    top: 230px;
+    position: absolute;
+    bottom: 0px;
     p{
       font-size: 18px;
       color: #fff;

@@ -7,7 +7,6 @@
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet/less" type="text/css" href="less/alltype.less" />
-    <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/less.min.js"></script>
 </head>
 <body>
@@ -140,10 +139,47 @@
             <!--侧栏-->
             <div class="sideber-left">
                 <!--轮播图-->
-                <ul class="lunbo">
-                    <li>
-                        <img src="images/lunbo-1.jpg"></li>
-                </ul>
+                <div class="flexslider lunbo">
+                    <ul class="slides">
+                        <li>
+                            <div class="lubo-box">
+                                <a href="" title=""><img src="images/lunbo-1.jpg"></a>
+                                <h3>金鼎马路中间秀恩爱</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="lubo-box">
+                                <a href="" title=""><img src="images/lunbo-1.jpg"></a>
+                                <h3>金鼎马路中间秀恩爱</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="lubo-box">
+                                <a href="" title=""><img src="images/lunbo-1.jpg"></a>
+                                <h3>金鼎马路中间秀恩爱</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="lubo-box">
+                                <a href="" title=""><img src="images/lunbo-1.jpg"></a>
+                                <h3>金鼎马路中间秀恩爱</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="lubo-box">
+                                <a href="" title=""><img src="images/lunbo-1.jpg"></a>
+                                <h3>金鼎马路中间秀恩爱</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="lubo-box">
+                                <a href="" title=""><img src="images/lunbo-1.jpg"></a>
+                                <h3>金鼎马路中间秀恩爱</h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
                 <!--轮播图 end-->
                 <div class="gg-box">
                     <a href="" title=""><img src="images/gg-2.jpg" ></a>
@@ -560,20 +596,60 @@
         </div>
         <div class="food-box">
             <div class="food-content">
-                <div class="wedding">
-                    <img src="images/wedding.png">
-                    <div class="shadow">
-                        <p class="scene">吴奇隆刘诗诗结婚现场</p>
-                        <ol>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ol>
+                
+                    <div class="flexslider wedding">
+                        <ul class="slides">
+                            <li>
+                                <div class="lubo-box">
+                                    <a href="" title=""><img src="images/wedding.png"></a>
+                                    <div class="shadow">
+                                        <p class="scene">吴奇隆刘诗诗结婚现场</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lubo-box">
+                                    <a href="" title=""><img src="images/wedding.png"></a>
+                                    <div class="shadow">
+                                        <p class="scene">吴奇隆刘诗诗结婚现场</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lubo-box">
+                                    <a href="" title=""><img src="images/wedding.png"></a>
+                                    <div class="shadow">
+                                        <p class="scene">吴奇隆刘诗诗结婚现场</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lubo-box">
+                                    <a href="" title=""><img src="images/wedding.png"></a>
+                                    <div class="shadow">
+                                        <p class="scene">吴奇隆刘诗诗结婚现场</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lubo-box">
+                                    <a href="" title=""><img src="images/wedding.png"></a>
+                                    <div class="shadow">
+                                        <p class="scene">吴奇隆刘诗诗结婚现场</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="lubo-box">
+                                    <a href="" title=""><img src="images/wedding.png"></a>
+                                    <div class="shadow">
+                                        <p class="scene">吴奇隆刘诗诗结婚现场</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </div>
+                    
                 <div class="ads">
                     <div class="topic">
                         <h4>
@@ -1369,22 +1445,34 @@
             <div class="company-ifo"></div>
         </div>
     </div>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
     <script>
-    $(function(){
-       $('#searchText').focus(function(){
-           if($(this).val()=='请输搜索入内容'){
-               $(this).val('');
-           }
-       });
-        $('#searchText').blur(function() {
-            if($(this).val()==''){
-                $(this).val('请输搜索入内容');
-                $(this).removeClass('focus');
-            }else{
-                $(this).addClass('focus');
-            }
-        })
-    });
-</script>
+        $(function(){
+           $('#searchText').focus(function(){
+               if($(this).val()=='请输搜索入内容'){
+                   $(this).val('');
+               }
+           });
+            $('#searchText').blur(function() {
+                if($(this).val()==''){
+                    $(this).val('请输搜索入内容');
+                    $(this).removeClass('focus');
+                }else{
+                    $(this).addClass('focus');
+                }
+            });
+
+
+            //flash
+            $('.flexslider').flexslider({
+                animation: 'slide',
+                pauseOnHover: true,
+                directionNav: false,
+                slideshowSpeed:3000
+            });
+        });
+    </script>
 </body>
 </html>
