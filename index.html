@@ -351,43 +351,84 @@
                     <em>专题</em>栏目
                 </div>
                 <div class="s-tap">
-                    <div class="s-tap-body">
-                        <div class="pic-text-2 clearfix">
-                            <h4>小编为你解析手相啦，赶紧试吧</h4>
-                            <a href=""><img src="images/kl.png"></a>
-                            <p>每个家庭的标准不一样，比如说有些人想让自己的孩子优秀<a href="">【详细】</a></p>
+                    <div class="tap-body">
+                        <div class="current">
+                            <div class="pic-text-2 clearfix">
+                                <h4>小编为你解析手相啦，赶紧试吧</h4>
+                                <a href=""><img src="images/kl.png"></a>
+                                <p>每个家庭的标准不一样，比如说有些人想让自己的孩子优秀<a href="">【详细】</a></p>
+                            </div>
+                            <div class="pic-text-2 clearfix">
+                                <h4>小编为你解析手相啦，赶紧试吧</h4>
+                                <a href=""><img src="images/kl.png"></a>
+                                <p>每个家庭的标准不一样，比如说有些人想让自己的孩子优秀<a href="">【详细】</a></p>
+                            </div>
                         </div>
-                        <div class="pic-text-2 clearfix">
-                            <h4>小编为你解析手相啦，赶紧试吧</h4>
-                            <a href=""><img src="images/kl.png"></a>
-                            <p>每个家庭的标准不一样，比如说有些人想让自己的孩子优秀<a href="">【详细】</a></p>
+                        <div>
+                            <div class="pic-text-2 clearfix">
+                                <h4>小编为你解析手相啦，22222</h4>
+                                <a href=""><img src="images/kl.png"></a>
+                                <p>每个家庭的标准不一样，比如说有些人想让自己的孩子优秀<a href="">【详细】</a></p>
+                            </div>
+                            <div class="pic-text-2 clearfix">
+                                <h4>小编为你解析手相啦，222222</h4>
+                                <a href=""><img src="images/kl.png"></a>
+                                <p>每个家庭的标准不一样，比如说有些人想让自己的孩子优秀<a href="">【详细】</a></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="pic-text-2 clearfix">
+                                <h4>小编为你解析手相啦，33333</h4>
+                                <a href=""><img src="images/kl.png"></a>
+                                <p>每个家庭的标准不一样，比如说有些人想让自己的孩子优秀<a href="">【详细】</a></p>
+                            </div>
+                            <div class="pic-text-2 clearfix">
+                                <h4>小编为你解析手相啦，33333</h4>
+                                <a href=""><img src="images/kl.png"></a>
+                                <p>每个家庭的标准不一样，比如说有些人想让自己的孩子优秀<a href="">【详细】</a></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="s-tap-menu clearfix">
+                    <div class="tap-head clearfix">
                         <ul>
-                            <li><img src="images/s-tap-icon.png"></li>
-                            <li><img src="images/s-tap-icon.png"></li>
-                            <li><img src="images/bs-tap-icon.png"></li>
+                            <li class="current"></li>
+                            <li></li>
+                            <li></li>
                         </ul>
                     </div>
                 </div>
                 <div class="node-tap">
                         <div class="tap-head clearfix">
                             <ul>
-                                <li>公告</li>
+                                <li class="current">公告</li>
                                 <li>规则</li>
                                 <li>板块</li>
-                                <li>温度</li>
+                                <li class="last">温度</li>
                             </ul>
                         </div>
                         <div class="tap-body">
-                            <div>
+                            <div class="current">
                                 <p>    
                                     <a href="" title="">小鱼挂牌新三板</a>
                                     <a href="" title="">全面爆料</a>
                                     <a href="" title="">周周有奖</a>
                                     <a href="" title="">青鱼联盟闪亮登场</a>
                                     <a href="" title="">请你来当交警</a>
+                                </p>
+                            </div>
+                            <div>
+                                <p>    
+                                    <a href="" title="">新三板</a>
+                                </p>
+                            </div>
+                            <div>
+                                <p>    
+                                    <a href="" title="">新三板2333</a>
+                                </p>
+                            </div>
+                            <div>
+                                <p>    
+                                    <a href="" title="">新三板4444</a>
                                 </p>
                             </div>
                         </div>
@@ -471,7 +512,7 @@
                     </ul>
                 </div>
                 <div class="tap-body">
-                    <div>
+                    <div class="current">
                         <ul class="city-ul clearfix">
                             <li>
                                 <h4>
@@ -1691,6 +1732,15 @@
                 pauseOnHover: true,
                 directionNav: false,
                 slideshowSpeed:3000
+            });
+
+            //tap
+            $('.tap-head li').click(function(){
+
+                var index = $(this).index();
+                $(this).addClass('current').siblings().removeClass('current');
+                $(this).parents('.tap-head').siblings('.tap-body').children('div').eq(index).addClass('current').siblings().removeClass('current');
+
             });
         });
     </script>

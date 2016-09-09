@@ -569,6 +569,13 @@ body {
   }
 }
 
+.tap-body>div{
+  display: none;
+  &.current{
+    display: block;
+  }
+}
+
 //头部样式 jinx
 .header{
   position: relative;
@@ -846,30 +853,79 @@ body {
       }
     }
     .s-tap{
-      .s-tap-menu{
+      position: relative;
+      .pic-text-2{
+        margin-bottom: 5px;
+      }
+      .tap-head{
         margin: 0 auto;
         margin-top: 15px;
-        li{
-          float: left;
+        position: relative;
+        ul{
+          text-align: center;
+          position: relative;
+          width: 88px;
+          z-index: 10;
+          left:50%;
+          margin-left: -44px;
+          height: 18px;
+          background: #fff;
         }
+
+        li{
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-radius: 6px;
+          background: #dddddd;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+        li:first-child{
+          margin-left: 0;
+        }
+        li.current{
+          background: #318bd9;
+        }
+      }
+      .tap-head:after{
+        position: absolute;
+        content: '';
+        width: 260px;
+        border-bottom: 1px solid #dddddd;
+        bottom:10px;
       }
     }
     .node-tap{
-      margin-top: 25px;
+      margin-top: 20px;
       height: 107px;
       border: 1px solid #dddddd;
       .tap-head{
-        background: #fafafa;
         margin-bottom: 15px;
-        border-bottom: 1px solid #dddddd;
         li{
           font-size: 16px;
           color: #333333;
           text-align: center;
           line-height: 30px;
-          width: 60px;
+          width: 25%;
           height: 30px;
           float: left;
+          background: #fafafa;
+          border-bottom: 1px solid #dddddd;
+          box-sizing: border-box;
+          cursor: pointer;
+        }
+        li.current{
+          background: #fff;
+          border-bottom: none;
+          border-right: 1px solid #dddddd;
+          border-left: 1px solid #dddddd;
+        }
+        li:first-child{
+          border-left:none;
+        }
+        li.last{
+          border-right:none;
         }
       }
       .tap-body{
@@ -878,6 +934,10 @@ body {
           color: #343434;
           display: inline-block;
           margin-left: 10px;
+          line-height: 25px;
+        }
+        a:hover{
+          color:#ff6600;
         }
       }
     }
