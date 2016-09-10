@@ -243,26 +243,57 @@
                         </a>
                     </span>
                 </div>
-                <div class="video-box">
-                    <div class="img-box">
-                        <img src="images/void-img.jpg"></div>
-                    <div class="play-line">
-                        <i class="topic-icon play-icon"></i>
-                        <span class="play-title">智能家居普及的最大阻碍是</span>
-                    </div>
+                <div class="video-list">
                     <ul class="list-box">
-                        <li>
+                        <li class="current">
+                            <div class="video-box">
+                                <div class="img-box">
+                                    <img src="images/void-img.jpg">
+                                </div>
+                                <div class="play-line">
+                                    <i class="topic-icon play-icon"></i>
+                                    <span class="play-title">智能家居普及的最大阻碍是</span>
+                                </div>
+                            </div>
+                            
                             <a href="#" title="海信“聚好学”正式大屏 大屏育家">
                                 <i class="topic-icon hot-icon"></i>
                                 海信“聚好学”正式大屏 大屏育家
                             </a>
                         </li>
                         <li>
-                            <a href="#" title="乐视推超4 X50系列教品起价2499元">
+                            <div class="video-box">
+                                <div class="img-box">
+                                    <img src="images/void-img.jpg">
+                                </div>
+                                <div class="play-line">
+                                    <i class="topic-icon play-icon"></i>
+                                    <span class="play-title">智能家居普及的最大阻碍是</span>
+                                </div>
+                            </div>
+                            
+                            <a href="#" title="海信“聚好学”正式大屏 大屏育家">
                                 <i class="topic-icon hot-icon"></i>
-                                乐视推超4 X50系列教品起价2499元
+                                海信“聚好学”正式大屏 大屏育家
                             </a>
                         </li>
+                        <li>
+                            <div class="video-box">
+                                <div class="img-box">
+                                    <img src="images/void-img.jpg">
+                                </div>
+                                <div class="play-line">
+                                    <i class="topic-icon play-icon"></i>
+                                    <span class="play-title">智能家居普及的最大阻碍是</span>
+                                </div>
+                            </div>
+                            
+                            <a href="#" title="海信“聚好学”正式大屏 大屏育家">
+                                <i class="topic-icon hot-icon"></i>
+                                海信“聚好学”正式大屏 大屏育家
+                            </a>
+                        </li>
+                        
                     </ul>
                 </div>
                 <!--在线视频 end-->
@@ -2377,7 +2408,9 @@
                 }
             })();
 
-            
+            $('.video-list li').mouseenter(function(){
+                $(this).addClass('current').siblings().removeClass('current');
+            });
             
         });
     </script>

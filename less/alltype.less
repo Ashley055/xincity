@@ -1058,16 +1058,15 @@ body {
     }
   }
   .gg-box{
-    margin-top: 27px;
+    margin-top: 10px;
     height: 60px;
     img{
       display: block;
     }
   }
   .list-box{
-    margin-top: 10px;
     line-height: 30px;
-
+    margin-top: 19px;
     li{
       padding: 3px 0;
       text-overflow: ellipsis;
@@ -1079,9 +1078,20 @@ body {
     .topic-icon,.hot-icon {
       margin-right: 6px;
     }
+    li.current{
+      .video-box{
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+    li.current>a{
+      display: none;
+    }
   }
+  
 
   .video-box{
+    display: none;
     .img-box{
       height: 228px;
     }
