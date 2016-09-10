@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=8">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-    <!-- <link rel="stylesheet/less" type="text/css" href="less/alltype.less" /> -->
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet/less" type="text/css" href="less/alltype.less" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
     <script src="js/less.min.js"></script>
 </head>
 <body>
@@ -390,7 +390,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tap-head clearfix">
+                    <div class="tap-head hover clearfix">
                         <ul>
                             <li class="current"></li>
                             <li></li>
@@ -399,41 +399,41 @@
                     </div>
                 </div>
                 <div class="node-tap">
-                        <div class="tap-head clearfix">
-                            <ul>
-                                <li class="current">公告</li>
-                                <li>规则</li>
-                                <li>板块</li>
-                                <li class="last">温度</li>
-                            </ul>
+                    <div class="tap-head hover clearfix">
+                        <ul>
+                            <li class="current">公告</li>
+                            <li>规则</li>
+                            <li>板块</li>
+                            <li class="last">温度</li>
+                        </ul>
+                    </div>
+                    <div class="tap-body">
+                        <div class="current">
+                            <p>    
+                                <a href="" title="">小鱼挂牌新三板</a>
+                                <a href="" title="">全面爆料</a>
+                                <a href="" title="">周周有奖</a>
+                                <a href="" title="">青鱼联盟闪亮登场</a>
+                                <a href="" title="">请你来当交警</a>
+                            </p>
                         </div>
-                        <div class="tap-body">
-                            <div class="current">
-                                <p>    
-                                    <a href="" title="">小鱼挂牌新三板</a>
-                                    <a href="" title="">全面爆料</a>
-                                    <a href="" title="">周周有奖</a>
-                                    <a href="" title="">青鱼联盟闪亮登场</a>
-                                    <a href="" title="">请你来当交警</a>
-                                </p>
-                            </div>
-                            <div>
-                                <p>    
-                                    <a href="" title="">新三板</a>
-                                </p>
-                            </div>
-                            <div>
-                                <p>    
-                                    <a href="" title="">新三板2333</a>
-                                </p>
-                            </div>
-                            <div>
-                                <p>    
-                                    <a href="" title="">新三板4444</a>
-                                </p>
-                            </div>
+                        <div>
+                            <p>    
+                                <a href="" title="">新三板</a>
+                            </p>
+                        </div>
+                        <div>
+                            <p>    
+                                <a href="" title="">新三板2333</a>
+                            </p>
+                        </div>
+                        <div>
+                            <p>    
+                                <a href="" title="">新三板4444</a>
+                            </p>
                         </div>
                     </div>
+                </div>
 
                 <div class="ad">
                     <a href="" title=""><img src="images/rad.png" alt=""></a>
@@ -1889,11 +1889,11 @@
                     <p>和大多数90后一样，林某喜欢利、电脑等电子通讯设备，与他</p>
                     <p>人进行交流。近日，林嫌QJ罪...<a href="">[详细]</a></p>
                     <ul class="news-list">
-                        <li>海信“聚好学”正式大屏育新 大屏育迎来屏育迎来新玩家</li>
-                        <li>乐视推超4 X50系列电大品 新造型屏育迎来起价2499元</li>
-                        <li>海尔展示三大品牌洗护大育新品 洗屏育迎来衣机能洗玫瑰花</li>
-                        <li>Enclave Audio 5.1音响让大屏洗护育你屏育迎摆一堆线的烦恼</li>
-                        <li>海信“聚好学”正式大屏教育线 大屏育屏育迎来迎来新玩家</li>
+                        <li><a href="" title="">海信“聚好学”正式大屏育新 大屏育迎来屏育迎来新玩家</a></li>
+                        <li><a href="" title="">乐视推超4 X50系列电大品 新造型屏育迎来起价2499元</a></li>
+                        <li><a href="" title="">海尔展示三大品牌洗护大育新品 洗屏育迎来衣机能洗玫瑰花</a></li>
+                        <li><a href="" title="">Enclave Audio 5.1音响让大屏洗护育你屏育迎摆一堆线的烦恼</a></li>
+                        <li><a href="" title="">海信“聚好学”正式大屏教育线 大屏育屏育迎来迎来新玩家</a></li>
                     </ul>
                 </div>
                 <div class="hright">
@@ -2329,14 +2329,28 @@
                 slideshowSpeed:3000
             });
 
-            //tap
-            $('.tap-head li').click(function(){
+            bindTabEvent();
+            function bindTabEvent() {
+                $('.tap-head').each(function(index, el) {
+                    if ($(el).hasClass('hover')) {
+                        $(el).on('mouseenter', 'li', function(){
+                            changTab(this);
+                        });
+                    } else {
+                        $(el).on('click', 'li', function(){
+                            changTab(this);
+                        });
+                    }
+                });
+            }
 
-                var index = $(this).index();
-                $(this).addClass('current').siblings().removeClass('current');
-                $(this).parents('.tap-head').siblings('.tap-body').children('div').eq(index).addClass('current').siblings().removeClass('current');
-
-            });
+            //change tab
+            function changTab(el) {
+                var index = $(el).index();
+                $(el).addClass('current').siblings().removeClass('current');
+                $(el).parents('.tap-head').siblings('.tap-body').children('div').eq(index).addClass('current').siblings().removeClass('current');
+            }
+            
         });
     </script>
 </body>
