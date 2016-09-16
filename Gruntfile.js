@@ -7,7 +7,8 @@ module.exports = function(grunt) {
 
 	var config = {
 		app: 'app',
-		dist: 'dist'
+		dist: 'dist',
+		xcity: 'xcity'
 	};
 
 
@@ -16,15 +17,21 @@ module.exports = function(grunt) {
 		config: config,
 		copy: {
 			main: {
-				files: [{
-					expand: true,
-					src: ['<%= config.app %>/**', '!<%= config.app%>/less/**'],
-					dest: '<%= config.dist%>/'
-				}]
+			    expand: true,
+			    cwd: '<%= config.app %>',
+			    src: ['images/*', 'index.html', 'css/img/*'],
+			    dest: '<%= config.dist %>/'
+			},
+			xcity: {
+				files:[ {expand: true, src:['<%= config.app %>/**', '!<%= config.app %>/less/**'], dest: '<%= config.xcity %>/'}]
 			}
 		},
 
-		clean: ['<%= config.dist%>/'],
+		clean: {
+			dist: ['<%= config.dist %>'],
+			tmp: ['.tmp'],
+			xcity: ['<%= config.xcity %>']
+		},
 
 		less: {
 			development: {
@@ -49,6 +56,13 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		useminPrepare: {  // 与usemin结合的话，会自动有cancat,cssmin,uglify task。不要在声明具体task
+			html:'<%= config.app %>/index.html'
+		},
+
+		usemin: {
+			html:['<%= config.dist %>/{,*/}*.html']
+		},
 
 		watch: {
 			livereload: {
@@ -71,12 +85,26 @@ module.exports = function(grunt) {
 
 	});
 
+	grunt.registerTask('bsource', [
+		'clean:xcity',
+		'copy:xcity'
+	]);
+
 	grunt.registerTask('server', [
 		'connect:server',
 		'watch'
 	]);
 
 	//组合命令
-	grunt.registerTask('post', ['clean', 'copy']);
+	grunt.registerTask('build', [
+		'clean:dist',
+		'useminPrepare',
+		'concat',
+		'cssmin',
+		'uglify',
+		'copy',
+		'usemin',
+		'clean:tmp'
+	]);
 
 };
