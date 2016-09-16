@@ -85,17 +85,19 @@ module.exports = function(grunt) {
 
 	});
 
+	//生成不压缩源码
 	grunt.registerTask('bsource', [
 		'clean:xcity',
 		'copy:xcity'
 	]);
 
+	//运行开发模式
 	grunt.registerTask('server', [
 		'connect:server',
 		'watch'
 	]);
 
-	//组合命令
+	//生成压缩的源码
 	grunt.registerTask('build', [
 		'clean:dist',
 		'useminPrepare',
