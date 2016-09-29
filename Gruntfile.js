@@ -39,10 +39,20 @@ module.exports = function(grunt) {
 					paths: ['<%= config.app %>/']
 				},
 				files: {
-					'<%= config.app %>/css/index.css': '<%= config.app %>/less/alltype.less'
+					'<%= config.app %>/css/index.css': '<%= config.app %>/less/alltype.less',
+					'<%= config.app %>/css/fang.css': '<%= config.app %>/less/fang.less',
 				}
 			}
 		},
+
+		useminPrepare: {  // 与usemin结合的话，会自动有cancat,cssmin,uglify task。不要在声明具体task
+			html:'<%= config.app %>/index.html'
+		},
+
+		usemin: {
+			html:['<%= config.dist %>/{,*/}*.html']
+		},
+		
 		connect: {
 			server: {
 				options: {
@@ -56,14 +66,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		useminPrepare: {  // 与usemin结合的话，会自动有cancat,cssmin,uglify task。不要在声明具体task
-			html:'<%= config.app %>/index.html'
-		},
-
-		usemin: {
-			html:['<%= config.dist %>/{,*/}*.html']
-		},
-
 		watch: {
 			livereload: {
 				options: {
