@@ -34,10 +34,12 @@
             <div class="fleffect">
                 <div class="fleffect1"></div>
                 <div class="fleffect2">
-                    <div class="flash">
-                        <img src="images/flash.png">
-                        <a href="" id="pre"><img src="images/pre.png"></a>
-                        <a href="" class="last" id="next"><img src="images/next.png"></a>
+                    <div class="flash flexslider">
+                        <ul class="slides">
+                            <li><img src="images/flash.png"></li>
+                            <li><img src="images/flash.png"></li>
+                            <li><img src="images/flash.png"></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="fleffect3"></div>
@@ -45,9 +47,17 @@
             </div>
         </div>
 	</div>
-    <script type="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
     <script type="text/javascript">
-        
+        //flash
+        $('.flexslider').flexslider({
+            animation: 'slide',
+            pauseOnHover: true,
+            directionNav: true,
+            controlNav: false,
+            slideshowSpeed:3000
+        });
     </script>
 
 </body>

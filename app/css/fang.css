@@ -323,16 +323,29 @@ select {
   margin: 0 auto;
   position: relative;
 }
-.content .fleffect .fleffect2 a {
-  display: block;
-  height: 114px;
+.content .fleffect .fleffect2 .flash .flex-direction-nav {
   position: absolute;
+  width: 100%;
   top: 50%;
-  left: 5px;
   margin-top: -57px;
 }
-.content .fleffect .fleffect2 .last {
-  left: 770px;
+.content .fleffect .fleffect2 .flash .flex-direction-nav .flex-prev {
+  background: url(../images/pre.png) no-repeat;
+  width: 45px;
+  height: 114px;
+  display: inline-block;
+  font-size: 0;
+  float: left;
+  margin-left: 6px;
+}
+.content .fleffect .fleffect2 .flash .flex-direction-nav .flex-next {
+  background: url(../images/next.png) no-repeat;
+  width: 45px;
+  height: 114px;
+  display: inline-block;
+  font-size: 0;
+  float: right;
+  margin-right: 5px;
 }
 .content .fleffect .fleffect3 {
   height: 416px;
