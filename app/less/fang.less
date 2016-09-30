@@ -291,18 +291,32 @@ select {
         height: 552px;
         margin: 0 auto;
         position: relative;
+        .flex-direction-nav{
+          position: absolute;
+          width: 100%;
+          top:50%;
+          margin-top: -57px;
+          .flex-prev{
+            background: url(../images/pre.png) no-repeat;
+            width: 45px;
+            height: 114px;
+            display: inline-block;
+            font-size: 0;
+            float: left;
+            margin-left: 6px;
+          }
+          .flex-next{
+            background: url(../images/next.png) no-repeat;
+            width: 45px;
+            height: 114px;
+            display: inline-block;
+            font-size: 0;
+            float: right;
+            margin-right: 5px;
+          }
+        }
       }
-      a{
-        display: block;
-        height: 114px;
-        position: absolute;
-        top: 50%;
-        left: 5px;
-        margin-top: -57px;
-      }
-      .last{
-        left: 770px;
-      }
+
     }
     .fleffect3{
       height: 416px;
