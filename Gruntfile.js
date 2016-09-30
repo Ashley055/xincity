@@ -8,7 +8,8 @@ module.exports = function(grunt) {
 	var config = {
 		app: 'app',
 		dist: 'dist',
-		xcity: 'xcity'
+		xcity: 'xcity',
+		fang: 'fang'
 	};
 
 
@@ -24,13 +25,17 @@ module.exports = function(grunt) {
 			},
 			xcity: {
 				files:[ {expand: true, src:['<%= config.app %>/**', '!<%= config.app %>/less/**'], dest: '<%= config.xcity %>/'}]
+			},
+			fang: {
+				files:[ {expand: true, src:['<%= config.app %>/js/*','<%= config.app %>/fimage/*', '<%= config.app %>/css/fang.css', '<%= config.app %>/fang.html'], dest: '<%= config.fang %>/'}]
 			}
 		},
 
 		clean: {
 			dist: ['<%= config.dist %>'],
 			tmp: ['.tmp'],
-			xcity: ['<%= config.xcity %>']
+			xcity: ['<%= config.xcity %>'],
+			fang: ['<%= config.fang %>']
 		},
 
 		less: {
@@ -91,6 +96,11 @@ module.exports = function(grunt) {
 	grunt.registerTask('bsource', [
 		'clean:xcity',
 		'copy:xcity'
+	]);
+
+	grunt.registerTask('fang', [
+		'clean:fang',
+		'copy:fang'
 	]);
 
 	//运行开发模式

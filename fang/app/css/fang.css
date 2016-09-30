@@ -323,10 +323,9 @@ body {
   background: url(../fimage/fleffect2.jpg);
 }
 .content .fleffect .fleffect2 .flash {
-  width: 810px;
-  height: 542px;
+  width: 820px;
+  height: 552px;
   margin: 0 auto;
-  border: 5px solid #e6bd99;
   position: relative;
 }
 .content .fleffect .fleffect2 .flash .flex-direction-nav {
@@ -342,6 +341,7 @@ body {
   display: inline-block;
   font-size: 0;
   float: left;
+  margin-left: 6px;
 }
 .content .fleffect .fleffect2 .flash .flex-direction-nav .flex-next {
   background: url(../fimage/next.png) no-repeat;
@@ -350,6 +350,7 @@ body {
   display: inline-block;
   font-size: 0;
   float: right;
+  margin-right: 5px;
 }
 .content .fleffect .fleffect3 {
   height: 416px;
