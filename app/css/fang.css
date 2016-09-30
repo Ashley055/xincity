@@ -314,8 +314,25 @@ select {
   background: url(../images/fleffect1.jpg);
 }
 .content .fleffect .fleffect2 {
-  height: 554px;
+  height: 552px;
   background: url(../images/fleffect2.jpg);
+}
+.content .fleffect .fleffect2 .flash {
+  width: 820px;
+  height: 552px;
+  margin: 0 auto;
+  position: relative;
+}
+.content .fleffect .fleffect2 a {
+  display: block;
+  height: 114px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  margin-top: -57px;
+}
+.content .fleffect .fleffect2 .last {
+  left: 770px;
 }
 .content .fleffect .fleffect3 {
   height: 416px;
