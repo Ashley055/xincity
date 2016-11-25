@@ -1,0 +1,515 @@
+
+
+/*公用样式*/
+@import "allPublic.less";
+
+@charset "utf-8";
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
+  font-family: "微软雅黑", "microsoft yahei", Arial, sans-serif;
+}
+
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  margin: 0;
+  padding: 0;
+}
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 媒体文件跟 img 保持一致 */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+button, input, select, textarea {
+  font: 500 14px/1.8 "微软雅黑", "microsoft yahei", Arial, sans-serif;
+}
+
+/* IE6 Button 宽度自适应 */
+button, input {
+  *width: auto;
+  *overflow: visible;
+}
+
+/* 去掉各Table  cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* IE bug fixed: th 不继承 text-align*/
+th {
+  text-align: inherit;
+}
+
+/* 去除默认边框 */
+fieldset, img {
+  border: 0;
+}
+
+/* 解决 IE6-7 图片缩放锯齿问题 */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display: block;
+}
+
+blockquote blockquote {
+  padding: 0 0 0 1em;
+  margin-left: 2em;
+  border-left: 0.4em solid #ddd;
+}
+
+/* Firefox 以外，元素没有下划线，需添加 */
+acronym, abbr {
+  border-bottom: 1px dotted;
+  font-variant: normal;
+}
+
+/* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
+abbr {
+  cursor: help;
+}
+
+/* 一致的 del 样式 */
+del {
+  text-decoration: line-through;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
+ul, ol {
+  list-style: none;
+}
+
+i {
+  font-style: normal;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption, th {
+  text-align: left;
+}
+
+q:before, q:after {
+  content: '';
+}
+
+/* 让链接在 hover 状态下显示下划线 */
+a:hover{
+  text-decoration: underline;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins, a {
+  text-decoration: none;
+  color: #333;
+}
+u, .typo-u {
+  text-decoration: underline;
+}
+
+/* 标记，类似于手写的荧光笔的作用 */
+mark {
+  background: #fffdd1;
+}
+
+/* 代码片断 */
+pre, code {
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+pre {
+  border: 1px solid #ddd;
+  border-left-width: 0.4em;
+  background: #fbfbfb;
+  padding: 10px;
+}
+
+/* 底部印刷体、版本等标记 */
+small {
+  font-size: 12px;
+  color: #888;
+}
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both
+}
+
+.clearfix {
+  zoom: 1
+}
+
+.clear {
+  display: block;
+  clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  font-weight: 800 \9;
+  color: #333;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+  outline: none;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #ccc;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #ccc;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="input"],
+{
+  -webkit-appearance: none;
+}
+
+select {
+  -webkit-appearance: none !important;
+  border-radius: 0;
+  -webkit-appearance: menulist;
+  -webkit-box-sizing: border-box;
+  -webkit-box-align: center;
+  border: 1px solid;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
+  background-color: white;
+  cursor: default;
+}
+
+body {
+  font-size: 12px;
+  color: #666;
+}
+
+.wrap{
+  background: #eec392;
+}
+.content{
+  width: 1100px;
+  overflow: hidden;
+  margin: 0 auto;
+  .header{
+    height: 500px;
+    background: url(../fimage/header.jpg) no-repeat;
+    a{
+      display: block;
+    }
+  }
+  .activity{
+    .flactiv1{
+      height: 161px;
+      background: url(../fimage/flactiv1.jpg);
+    }
+    .flactiv2{
+      height: 211px;
+    }
+    .flactiv3{
+      height: 741px;
+      background: url(../fimage/flactiv3.jpg);
+    }
+  }
+  .aboutfl{
+    .aboutfl1{
+      height: 524px;
+      background: url(../fimage/aboutfl1.jpg);
+    }
+    .aboutfl2{
+      height: 262px;
+      background: url(../fimage/aboutfl2.jpg);
+    }
+    .aboutfl3{
+      height: 649px;
+      background: url(../fimage/aboutfl3.jpg);
+    }
+    .aboutfl4{
+      height: 845px;
+      background: url(../fimage/aboutfl4.jpg);
+    }
+    .aboutfl5{
+      height: 1125px;
+      background: url(../fimage/aboutfl5.jpg);
+    }
+    .aboutfl6{
+      height: 1128px;
+      background: url(../fimage/aboutfl6.jpg);
+    }
+    .aboutfl7{
+      height: 633px;
+      background: url(../fimage/aboutfl7.jpg);
+    }
+    .aboutfl8{
+      height: 1407px;
+      background: url(../fimage/aboutfl8.jpg);
+    }
+    .aboutfl9{
+      height: 444px;
+      background: url(../fimage/aboutfl9.jpg);
+    }
+  }
+  .fleffect{
+    .fleffect1{
+      height: 231px;
+      background: url(../fimage/fleffect1.jpg);
+    }
+    .fleffect2{
+      height: 552px;
+      background: url(../fimage/fleffect2.jpg);
+      .flash{
+        width: 810px;
+        height: 542px;
+        margin: 0 auto;
+        border:5px solid #e6bd99;
+        position: relative;
+        .flex-direction-nav{
+          position: absolute;
+          width: 100%;
+          top:50%;
+          margin-top: -57px;
+          .flex-prev{
+            background: url(../fimage/pre.png) no-repeat;
+            width: 45px;
+            height: 114px;
+            display: inline-block;
+            font-size: 0;
+            float: left;
+          }
+          .flex-next{
+            background: url(../fimage/next.png) no-repeat;
+            width: 45px;
+            height: 114px;
+            display: inline-block;
+            font-size: 0;
+            float: right;
+          }
+        }
+      }
+
+    }
+    .fleffect3{
+      height: 416px;
+      background: url(../fimage/fleffect3.jpg);
+    }
+  }
+}
+
+//foot
+#foot {
+}
+
+.links {
+    background-color: #129bc9;
+    padding: 5px 0px;
+}
+
+.links h3 {
+    float: left;
+    background: url(http://www.hiputian.com/./template/xww/xcw_img/link_back.png) center center no-repeat;
+    width: 79px;
+    height: 25px;
+    line-height: 25px;
+    text-indent: 10px;
+    color: #ffea00;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.links .fonts {
+    float: right;
+    width: 910px;
+    line-height: 24px;
+}
+
+.links .fonts a {
+    color: #FFFFFF;
+    font-weight: normal;
+}
+
+.footer_nav {
+    background-color: #048ebc;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.footer_nav_lists {
+    float: left;
+    width: 600px;
+    border-right: #36a5c9 1px solid;
+}
+
+.footer_nav_lists ul li {
+    float: left;
+    width: 145px;
+}
+
+.footer_nav_lists ul li h3 {
+    text-indent: 30px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 6px 0px;
+}
+
+.footer_nav_lists ul li {
+    line-height: 26px;
+}
+
+.footer_nav_lists ul li a {
+    color: #82c7de;
+    text-decoration: none
+}
+
+.footer_banquan {
+    text-align: right;
+    line-height: 24px;
+    color: #b8d6e6
+}
+
+.luntan {
+    background: url(http://www.hiputian.com/./template/xww/xcw_img/back002.jpg) center top repeat-y;
+    width: 1008px;
+    margin: 0px auto;
+}
+
+.luntan_tit {
+    background: url(http://www.hiputian.com/./template/xww/xcw_img/back001.jpg) center center no-repeat;
+    height: 55px;
+    line-height: 55px;
+}
+
+.left_fonts {
+    float: left;
+    text-indent: 40px;
+    font-size: 18px;
+    color: #333;
+}
+
+.show_mores {
+    float: right;
+    padding-right: 40px;
+    color: #999999;
+}
+
+.luntan_bottom {
+    background: url(http://www.hiputian.com/./template/xww/xcw_img/back003.jpg) center center no-repeat;
+    height: 13px;
+}
+
+.luntan_content {
+}
+
+.luntan_content ul {
+    padding-top: 35px;
+    padding-left: 15px;
+}
+
+.luntan_content ul li {
+    float: left;
+    width: 278px;
+    height: 100px;
+    margin-left: 33px;
+    display: inline
+}
+
+.luntan_content ul li .li_img {
+    float: left;
+    width: 64px;
+    height: 64px;
+}
+
+.luntan_content ul li .li_fonts {
+    float: right;
+    width: 200px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.luntan_content ul li .li_fonts h3 {
+    padding-bottom: 4px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.bm_info {
+    width: 955px;
+    margin: 0px auto;
+}
+
+.bm_info h4 {
+    color: #333333;
+    font-size: 14px;
+    padding: 8px 15px;
+    background-color: #f6f6f6;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.bm_info h4 span {
+    color: #999999;
+    font-size: 12px;
+    font-weight: normal;
+    padding-left: 210px;
+}
+.clearfloat {
+    clear: both;
+    height: 0;
+    font-size: 1px;
+    line-height: 0px;
+}
+.width1000 {
+    width: 1000px;
+    margin: 0px auto
+}
+.fx1 {
+    background: url(http://www.hiputian.com/./template/xww/xcw_img/link01.png) left center no-repeat;
+}
+
+.fx2 {
+    background: url(http://www.hiputian.com/./template/xww/xcw_img/link02.png) left center no-repeat;
+}
+
+.fx3 {
+    background: url(http://www.hiputian.com/./template/xww/xcw_img/link03.png) left center no-repeat;
+}
+
+.fx4 {
+    background: url(http://www.hiputian.com/./template/xww/xcw_img/link04.png) left center no-repeat;
+}
