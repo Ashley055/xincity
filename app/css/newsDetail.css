@@ -1,0 +1,35 @@
+.news-detail .content {
+  margin: 0 328px;
+  width: auto;
+  padding-bottom: 70px;
+}
+.news-detail .content .title .info {
+  color: #7a7a7a;
+  font-size: 14px;
+}
+.news-detail .content .title .info .writer {
+  margin-right: 35px;
+}
+.news-detail .content .news-content p {
+  margin-top: 39px;
+  text-indent: 32px;
+  font-size: 16px;
+  color: #333;
+  line-height: 30px;
+}
+.news-detail .content .news-content img {
+  margin: 38px 70px 20px 95px;
+}
+.news-detail .content .link {
+  margin: 60px;
+  text-align: center;
+}
+.news-detail .content .link a {
+  margin-right: 10px;
+}
+.news-detail .content .link a:first-child img {
+  margin-right: 20px;
+}
+.news-detail .content .link a:last-child img {
+  margin-left: 20px;
+}

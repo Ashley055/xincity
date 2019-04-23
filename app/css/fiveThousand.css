@@ -1,0 +1,201 @@
+.five-thousand .page-top {
+  width: 1880px;
+  height: 920px;
+}
+.five-thousand .page-top .img {
+  width: 1880px;
+  height: 920px;
+}
+.five-thousand .page-top .top-info {
+  background: transparent;
+}
+.five-thousand .page-top .top-info .info {
+  position: absolute;
+  top: 150px;
+  right: 340px;
+}
+.five-thousand .page-top .top-info .info li {
+  display: inline-block;
+  vertical-align: top;
+  width: 40px;
+  font-size: 30px;
+  color: #fff;
+}
+.five-thousand .page-top .top-info .info li:last-child {
+  font-size: 48px;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+.five-thousand .page-top .top-info .news {
+  position: absolute;
+  padding-right: 100px;
+  padding-left: 20px;
+  left: 0;
+  bottom: 45px;
+  height: 40px;
+  line-height: 40px;
+  z-index: 111;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+}
+.five-thousand .page-top .top-info .news span:first-child {
+  padding-right: 15px;
+  margin-right: 15px;
+  height: 16px;
+  border-right: 1px solid #fff;
+}
+.five-thousand .five-summery {
+  position: relative;
+  margin-right: 120px;
+  height: 853px;
+}
+.five-thousand .five-summery .left {
+  width: 50%;
+  position: relative;
+}
+.five-thousand .five-summery .left .img {
+  height: 100%;
+}
+.five-thousand .five-summery .left .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -162px;
+  margin-top: -181px;
+  color: #fff;
+  text-align: center;
+}
+.five-thousand .five-summery .left .info .cn-name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 56px;
+}
+.five-thousand .five-summery .left .info .en-name {
+  font-size: 16px;
+  line-height: 30px;
+}
+.five-thousand .five-summery .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 853px;
+  background: url(../images/fiveSp3.jpg) left top no-repeat;
+}
+.five-thousand .five-summery .right .inner {
+  width: 575px;
+  height: 370px;
+  margin: 0 auto;
+  margin-top: 200px;
+  min-height: 660px;
+  overflow: hidden;
+}
+.five-thousand .five-summery .right .inner h3 {
+  font-size: 40px;
+  color: #444;
+  letter-spacing: 0.5em;
+}
+.five-thousand .five-summery .right p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+  line-height: 30px;
+}
+.five-thousand .products li.item {
+  position: relative;
+  margin-top: 100px;
+  padding-bottom: 115px;
+  padding-right: 72px;
+  margin-right: 120px;
+  padding-left: 70px;
+}
+.five-thousand .products li.item .link {
+  margin-top: 100px;
+  text-align: center;
+}
+.five-thousand .products .title {
+  margin-bottom: 55px;
+}
+.five-thousand .products .title .cn {
+  padding-left: 15px;
+  border-left: 3px solid #ac793c;
+  font-size: 36px;
+  color: #000;
+}
+.five-thousand .products .title .en {
+  margin-left: 30px;
+  font-size: 14px;
+  color: #b1b1b1;
+}
+.five-thousand .products .list {
+  font-size: 0;
+}
+.five-thousand .products .list li {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+}
+.five-thousand .products .list li .text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -32px;
+  text-align: center;
+  z-index: 9;
+  color: #fff;
+}
+.five-thousand .products .list li .text .small {
+  font-size: 12px;
+}
+.five-thousand .products .list li .text .large {
+  font-size: 36px;
+}
+.five-thousand .products .list.order li {
+  width: 33%;
+}
+.five-thousand .products .list.order li .info {
+  max-width: 525px;
+  font-size: 14px;
+  color: #999;
+}
+.five-thousand .products .list.order li .info h3 {
+  color: #333;
+  font-size: 26px;
+  line-height: 50px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom: 1px solid #636363;
+}
+.five-thousand .products .list.order li .info h3 span {
+  font-size: 36px;
+}
+.five-thousand .products .list.order li .info p {
+  line-height: 25px;
+}
+.five-thousand .products .list.order li .info p.price {
+  margin-top: 20px;
+  font-size: 30px;
+  color: #ac793c;
+}
+.five-thousand .products .list.order li .info p.price:after {
+  display: inline-block;
+  content: '';
+  width: 10px;
+  height: 2px;
+  margin-left: 15px;
+  margin-top: -15px;
+  background: #ad793c;
+  vertical-align: middle;
+}
+.five-thousand .products .bg {
+  position: absolute;
+  width: 100%;
+  height: 520px;
+  background-color: #eaeaea;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}

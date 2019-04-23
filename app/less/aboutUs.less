@@ -1,0 +1,119 @@
+.about-us{
+    overflow: hidden;
+    .navs{
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        margin-top: 100px;
+        text-align: center;
+        a{
+            display: inline-block;
+            margin-right: 40px;
+            color: #cfcfcf;
+            font-size: 20px;
+            text-align: center;
+            &:last-child{
+                margin-right: 0;
+            }
+            span{
+                display: block;
+            }
+            em{
+                display: inline-block;
+                width: 17px;
+                height: 9px;
+                background: url(../images/down.png) center no-repeat;
+            }
+        }
+    }
+    .brand{
+        position: relative;
+        margin-left: 23px;
+        margin-right: 120px;
+        padding-top: 150px;
+        .title{
+            text-align: center;
+            font-size: 32px;
+            color: #020202;
+            letter-spacing: 0.2em;
+            &:before{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                content: '';
+                width: 1px;
+                height: 108px;
+                background: #333;
+            }
+        }
+        .sub-title{
+            margin-top: 10px;
+            margin-bottom: 60px;
+            text-align: center;
+            font-size: 14px;
+            color: #a3a3a3;
+        }
+        .brand-info{
+            position: relative;
+            height: 100%;
+        }
+        .left{
+            width: 50%;
+            overflow: hidden;
+        }
+        .right{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            padding-top: 125px;
+            padding-left: 85px;
+            padding-right: 155px;
+            overflow-y: auto;
+            box-sizing: border-box;
+            background: #f9f8f8;
+            h3{
+                font-size: 28px;
+                color: #bf9a64;
+            }
+            .des{
+                margin-top: 7px;
+                font-size: 18px;
+                color: #bf9a64;
+            }
+            p{
+                margin-top: 30px;
+                font-size: 16px;
+                color: #333;
+            }
+            .signature{
+                margin-top: 70px;
+                text-align: right;
+            }
+        }
+    }
+    .brand-culture{
+        margin-top: 55px;
+        padding-top: 50px;
+        margin-right: 120px;
+        text-align: center;
+        background: url(../images/culture.bg.png) left top no-repeat;
+        .title-wrap{
+            position: relative;
+            .img{
+                position: absolute;
+                top: 0;
+            }
+        }
+        .title{
+            font-size: 32px;
+            color: #020202;
+        }
+        .en{
+            font-size: 18px;
+            color: #a3a3a3;
+            line-height: 30px;
+        }
+    }
+}

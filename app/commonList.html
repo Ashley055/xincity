@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>木之森</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <!-- build:css css/common.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <!-- endbuild -->
+    <!-- build:css css/commonList.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/commonList.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="common-list">
+        <div class="top-left">
+            <h3>木之森美学馆</h3>
+            <p>Muzhisen Aesthetics</p>
+        </div>
+        <div class="tab" id="tab">
+            <ul>
+                <li class="active">全部</li>
+                <li>初境</li>
+                <li>感知</li>
+                <li>不惑</li>
+                <li>知名</li>
+            </ul>
+        </div>
+        <div class="list-content">
+            <ul class="list">
+                <li>
+                    <img src="images/itemPic.jpg" alt="">
+                    <h3>星洲水沉</h3>
+                    <p>木之森沉香伍仟产品系列</p>
+                </li>
+                <li>
+                    <img src="images/itemPic.jpg" alt="">
+                    <h3>星洲水沉</h3>
+                    <p>木之森沉香伍仟产品系列</p>
+                </li>
+                <li>
+                    <img src="images/itemPic.jpg" alt="">
+                    <h3>星洲水沉</h3>
+                    <p>木之森沉香伍仟产品系列</p>
+                </li>
+                <li>
+                    <img src="images/itemPic.jpg" alt="">
+                    <h3>星洲水沉</h3>
+                    <p>木之森沉香伍仟产品系列</p>
+                </li>
+                <li>
+                    <img src="images/itemPic.jpg" alt="">
+                    <h3>星洲水沉</h3>
+                    <p>木之森沉香伍仟产品系列</p>
+                </li>
+                <li>
+                    <img src="images/itemPic.jpg" alt="">
+                    <h3>星洲水沉</h3>
+                    <p>木之森沉香伍仟产品系列</p>
+                </li>
+                <li>
+                    <img src="images/itemPic.jpg" alt="">
+                    <h3>星洲水沉</h3>
+                    <p>木之森沉香伍仟产品系列</p>
+                </li>
+                <li>
+                    <img src="images/itemPic.jpg" alt="">
+                    <h3>星洲水沉</h3>
+                    <p>木之森沉香伍仟产品系列</p>
+                </li>
+                <li>
+                    <img src="images/itemPic.jpg" alt="">
+                    <h3>星洲水沉</h3>
+                    <p>木之森沉香伍仟产品系列</p>
+                </li>
+            </ul>
+            <ul class="pagination" id="pagination">
+                <li>></li>
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>></li>
+            </ul>
+        </div>
+        <div class="footer">
+            <span class="left">Copyright ©2017 www.muzhisen.info. All Right Reserved</span>
+            <span class="right">闽ICP备：123456789 | 技术支持：南希网站建设</span>
+        </div>
+    </div>
+</body>
+<!-- build:js js/app.lib.js -->
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<!-- endbuild -->
+<script>
+    $(function () {
+        //flash
+        $('#tab li').off('click').click(function() {
+            $(event.target).addClass('active').siblings().removeClass('active');
+        })
+
+    });
+    $('#pagination li').off('click').click(function(event) {
+    if ($(event.target).index() == 0) {
+        var index = $(event.target).siblings('.active').index();
+        if (index < $('#pagination li').length - 2){
+            $(event.target).siblings().eq(index).addClass('active').siblings().removeClass('active')
+        }
+    } else if ($(event.target).index() != 0) {
+        $(event.target).addClass('active').siblings().removeClass('active');
+    }
+})
+</script>
+</html>

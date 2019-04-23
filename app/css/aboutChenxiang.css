@@ -1,0 +1,133 @@
+.about-chenxiang .page-top {
+  position: relative;
+}
+.about-chenxiang .top-info {
+  height: 100%;
+}
+.about-chenxiang .introduction .part.mt105 {
+  margin-top: 105px;
+}
+.about-chenxiang .introduction .part.pb145 {
+  padding-bottom: 145px;
+}
+.about-chenxiang .introduction .part .shadow {
+  width: 99%;
+  height: 99%;
+}
+.about-chenxiang .introduction .part .left {
+  max-width: 55%;
+  margin-left: 110px;
+}
+.about-chenxiang .introduction .part .right {
+  position: absolute;
+  top: 0;
+  right: 95px;
+}
+.about-chenxiang .introduction .part .right .mt39 {
+  margin-top: 39px;
+}
+.about-chenxiang .introduction .part .gray {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 694px;
+  width: 100%;
+  background: #eaeaea;
+  z-index: -1;
+}
+.about-chenxiang .common-introduce {
+  position: relative;
+  height: 340px;
+  margin-right: 120px;
+  padding-bottom: 160px;
+  background: #f9f8f8;
+}
+.about-chenxiang .common-introduce li {
+  display: block;
+  margin-bottom: 15px;
+}
+.about-chenxiang .common-introduce .left .left-bottom {
+  position: absolute;
+  bottom: 160px;
+}
+.about-chenxiang .common-introduce .right {
+  position: absolute;
+  top: 50px;
+  left: 520px;
+  border-top: none;
+  border-bottom: none;
+  height: 340px;
+  overflow-y: auto;
+}
+.about-chenxiang .common-introduce .right .date {
+  font-size: 20px;
+  color: #000;
+  vertical-align: middle;
+}
+.about-chenxiang .common-introduce .right .divider {
+  margin-left: 15px;
+  vertical-align: middle;
+}
+.about-chenxiang .common-introduce .right .text {
+  display: inline-block;
+  max-width: 950px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.about-chenxiang .qulity {
+  position: relative;
+  margin-right: 120px;
+}
+.about-chenxiang .qulity .right {
+  position: absolute;
+  width: 50%;
+  height: 670px;
+  right: 0;
+  top: 0;
+  background: #edeef0;
+}
+.about-chenxiang .qulity .right .lunbo {
+  height: 100%;
+}
+.about-chenxiang .qulity .right .lunbo .flex-direction-nav {
+  left: 125px;
+  right: 110px;
+}
+.about-chenxiang .qulity .right .lunbo .flex-direction-nav li:nth-of-type(1) a {
+  background: url(../images/gray-pre.png) center no-repeat;
+  background-size: 15px 29px;
+}
+.about-chenxiang .qulity .right .lunbo .flex-direction-nav li:nth-of-type(2) a {
+  background: url(../images/gray-next.png) center no-repeat;
+  background-size: 15px 29px;
+}
+.about-chenxiang .qulity .right .lunbo .lunbo-box {
+  position: relative;
+  width: 460px;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-chenxiang .qulity .right .lunbo .lunbo-box a .title {
+  margin-top: 85px;
+  margin-bottom: 25px;
+  font-size: 32px;
+  color: #020202;
+  letter-spacing: 0.3em;
+}
+.about-chenxiang .qulity .right .lunbo .lunbo-box a .sub-title {
+  font-size: 14px;
+  color: #979899;
+}
+.about-chenxiang .qulity .right .lunbo .lunbo-box a .text {
+  margin-top: 35px;
+}
+.about-chenxiang .qulity .right .lunbo .lunbo-box a .text li {
+  width: 35px;
+  display: inline-block;
+  font-size: 24px;
+  color: #333;
+  vertical-align: top;
+}

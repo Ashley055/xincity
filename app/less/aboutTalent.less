@@ -1,0 +1,86 @@
+.content{
+    .title{
+        position: relative;
+        border-bottom: none;
+        &::after{
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            left: 50%;
+            bottom: 0;
+            margin-left: -25px;;
+            content: '';
+            background-color: #cfa972;
+        }
+    }
+    .desc{
+        margin-top: 30px;
+        padding-bottom: 65px;
+        p{
+            text-align: center;
+            line-height: 30px;
+            font-size: 14px;
+            color: #999;
+        }
+    }
+    .jobs-wrap{
+        .jobs{
+            .job{
+                padding: 36px 0;
+                border-top: 1px dotted #8b8b8b;
+                li{
+                    display: inline-block;
+                    width: 24%;
+                    font-size: 0;
+                    line-height: 28px;
+                    vertical-align: top;
+                    dl{
+                        line-height: 30px;
+                        dt{
+                            font-size: 22px;
+                            color: #010101;
+                        }
+                        dd{
+                            margin-top: 5px;
+                            font-size: 14px;
+                            color: #666;
+                        }
+                    }
+                    div{
+                        font-size: 14px;
+                        color: #999;
+                    }
+                }
+                .requirement{
+                    margin-top: 30px;
+                    padding-left: 24%;
+                    .til{
+                        position: relative;
+                        margin-bottom: 10px;
+                        line-height: 30px;
+                        font-family:"SimSun";
+                        font-size: 14px;
+                        color: #666;
+                        .expend{
+                            position: absolute;
+                            right: 0;
+                            cursor: pointer;
+                            font-size: 12px;
+                            color: #cfa972;
+                        }
+                    }
+                    .detail{
+                        p{
+                            line-height: 30px;
+                            font-size: 14px;
+                            color: #999;
+                        }
+                        &.hide{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.content .title {
+  position: relative;
+  border-bottom: none;
+}
+.content .title::after {
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  margin-left: -25px;
+  content: '';
+  background-color: #cfa972;
+}
+.content .desc {
+  margin-top: 30px;
+  padding-bottom: 65px;
+}
+.content .desc p {
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  color: #999;
+}
+.content .jobs-wrap .jobs .job {
+  padding: 36px 0;
+  border-top: 1px dotted #8b8b8b;
+}
+.content .jobs-wrap .jobs .job li {
+  display: inline-block;
+  width: 24%;
+  font-size: 0;
+  line-height: 28px;
+  vertical-align: top;
+}
+.content .jobs-wrap .jobs .job li dl {
+  line-height: 30px;
+}
+.content .jobs-wrap .jobs .job li dl dt {
+  font-size: 22px;
+  color: #010101;
+}
+.content .jobs-wrap .jobs .job li dl dd {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
+.content .jobs-wrap .jobs .job li div {
+  font-size: 14px;
+  color: #999;
+}
+.content .jobs-wrap .jobs .job .requirement {
+  margin-top: 30px;
+  padding-left: 24%;
+}
+.content .jobs-wrap .jobs .job .requirement .til {
+  position: relative;
+  margin-bottom: 10px;
+  line-height: 30px;
+  font-family: "SimSun";
+  font-size: 14px;
+  color: #666;
+}
+.content .jobs-wrap .jobs .job .requirement .til .expend {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  font-size: 12px;
+  color: #cfa972;
+}
+.content .jobs-wrap .jobs .job .requirement .detail p {
+  line-height: 30px;
+  font-size: 14px;
+  color: #999;
+}
+.content .jobs-wrap .jobs .job .requirement .detail.hide {
+  display: none;
+}

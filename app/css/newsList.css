@@ -1,0 +1,127 @@
+.news-list .page-top .top-info .title .links {
+  margin-top: 20px;
+  text-align: center;
+  background: transparent;
+}
+.news-list .page-top .top-info .title .links a {
+  margin-right: 25px;
+  color: #fff;
+  font-size: 20px;
+}
+.news-list .page-top .top-info .title .links a:last-child {
+  margin-right: 0;
+}
+.news-list .news-content {
+  margin-left: 23px;
+}
+.news-list .news-content .hot li {
+  position: relative;
+  margin-right: 143px;
+  margin-bottom: 100px;
+  height: 872px;
+}
+.news-list .news-content .hot li:nth-of-type(odd) .left,
+.news-list .news-content .hot li:nth-of-type(even) .right {
+  display: inline-block;
+  width: 1264px;
+  height: 100%;
+}
+.news-list .news-content .hot li:nth-of-type(odd) .left img,
+.news-list .news-content .hot li:nth-of-type(even) .right img {
+  width: 100%;
+  height: 100%;
+}
+.news-list .news-content .hot li:nth-of-type(even) .left,
+.news-list .news-content .hot li:nth-of-type(odd) .right {
+  padding: 50px;
+  width: 660px;
+  height: 550px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.news-list .news-content .hot li:nth-of-type(even) .left h3,
+.news-list .news-content .hot li:nth-of-type(odd) .right h3 {
+  font-size: 24px;
+  color: #333;
+}
+.news-list .news-content .hot li:nth-of-type(even) .left p,
+.news-list .news-content .hot li:nth-of-type(odd) .right p {
+  margin-top: 38px;
+  margin-bottom: 70px;
+  font-size: 14px;
+  color: #666;
+  line-height: 30px;
+}
+.news-list .news-content .hot li .right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 1264px;
+}
+.news-list .news-content .hot li:nth-of-type(even) {
+  height: 661px;
+}
+.news-list .news-content .hot li:nth-of-type(even) .left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+}
+.news-list .news-content .hot li:nth-of-type(even) .left h3 {
+  margin-bottom: 70px;
+}
+.news-list .news-content .hot li:nth-of-type(even) .left p {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  text-indent: 26px;
+}
+.news-list .news-content .hot li:nth-of-type(even) .left .link {
+  margin-top: 90px;
+}
+.news-list .news-content .list {
+  margin-right: 143px;
+  font-size: 0;
+}
+.news-list .news-content .list li {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
+  width: 25%;
+  box-sizing: border-box;
+  margin-bottom: 28px;
+  min-height: 370px;
+  font-size: 20px;
+  color: #333;
+}
+.news-list .news-content .list li:first-child {
+  padding-left: 0;
+}
+.news-list .news-content .list li:nth-of-type(4n) {
+  padding-right: 0;
+}
+.news-list .news-content .list li .inner {
+  height: 369px;
+  border-bottom: 1px solid #7f7f7f;
+}
+.news-list .news-content .list li .img {
+  display: block;
+  width: 100%;
+  height: 309px;
+}
+.news-list .news-content .list li span {
+  display: inline-block;
+  width: 70%;
+  height: 60px;
+  line-height: 60px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.news-list .news-content .list li .news-icon {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 23px;
+  height: 29px;
+  z-index: 9;
+}

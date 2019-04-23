@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>木之森网站</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script>
+        // rem
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <!-- build:css css/common.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <!-- endbuild -->
+    <!-- build:css css/fiveThousand.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/fiveThousand.css" />
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="five-thousand">
+        <!--头部-->
+        <div class="page-top">
+            <img class="img" src="images/fiveSp1.jpg" alt="">
+            <div class="top-info">
+                <div class="logo"><img src="images/logo.png" alt=""></div>
+                <div class="info">
+                    <ul>
+                        <li>/</li>
+                        <li>人格化情感的空间构建</li>
+                        <li>新生活美学首倡者践行者</li>
+                        <li>伍仟香业</li>
+                    </ul>
+                </div>
+            </div>
+            <!--新闻-->
+            <div class="news">
+                <span>NEWS</span>
+                <span>木之森·泰国孩子香道体验</span>
+            </div>
+            <!--新闻 end-->
+        </div>
+        <!--右侧菜单-->
+        <div class="nav-bar">
+            <div>
+                <img src="images/menu-collap.png" alt="">
+            </div>
+            <p class="menu-text">导 航 菜 单</p>
+            <h3 class="label">木之森香文化</h3>
+            <p class="des">始于
+                <span>2007</span>年</p>
+            <ul class="menus">
+                <li><a>木之森沉香</a></li>
+                <li><a>木之森美学馆</a></li>
+                <li><a>伍仟香业</a></li>
+            </ul>
+            <div class="web-link">
+                <a href="">
+                    <img src="images/icon-cart.png" alt="">
+                    <span>官方商城</span>
+                </a>
+            </div>
+        </div>
+        <!--右侧菜单 end-->
+        <!--头部 end-->
+        <!--简介-->
+        <div class="five-summery">
+            <div class="left">
+                <div><img class="img" src="images/fiveSp2.jpg" alt=""></div>
+                <div class="info">
+                    <img src="images/five-icon.png" alt="">
+                    <p class="cn-name">伍仟香业</p>
+                    <p class="en-name">wu  qian</p>
+                    <p class="en-name">Persimmon</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="inner">
+                        <h3>「伍仟」</h3>
+                        <p>作为国内新生活美学理论的首倡者和践行者，品牌创始人认为新美学正在逐步告别旧美学孤芳自赏的静止。</br>
+                                新生活美学，新在内容表达与人格化情感的空间构建，新在算法驱动下帮助用户决策并提供更贴心、
+                                省心的服务体验，新在以美学反差融合线上线下 
+                                产生人与人、人与万物的新连接。</p>                        
+                        <p>美不仅仅用来欣赏，美更是一种力量，它可以让产业产生更大的价值，同时能服务于广大的群众。</p>
+                </div>
+            </div>
+        </div>
+        <!--简介 end-->
+        <!--产品介绍-->
+        <ul class="products">
+            <li class="item">
+                <div class="title text-right">
+                    <span class="cn">产品介绍</span>
+                    <span class="en">Product introduction</span>
+                </div>
+                <ul class="list">
+                    <li>
+                        <img src="images/product1.jpg" alt="">
+                        <div class="text">
+                            <p class="small">伍仟沉香</p>
+                            <p class="large">初境`系</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/product1.jpg" alt="">
+                        <div class="text">
+                                <p class="small">伍仟沉香</p>
+                                <p class="large">初境`系</p>
+                            </div>
+                    </li>
+                    <li>
+                        <img src="images/product1.jpg" alt="">
+                        <div class="text">
+                            <p class="small">伍仟沉香</p>
+                            <p class="large">初境`系</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/product1.jpg" alt="">
+                        <div class="text">
+                            <p class="small">伍仟沉香</p>
+                            <p class="large">初境`系</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="bg"></div>
+            </li>
+            <li class="item">
+                    <div class="title">
+                        <span class="cn">私人订制</span>
+                        <span class="en">Private order</span>
+                    </div>
+                    <ul class="list order">
+                        <li>
+                            <img src="images/order.jpg" alt="">
+                            <div class="info">
+                                <h3><span>木</span>之森科技有限公司定制款（厦门）</h3>
+                                <p>木之森沉香现特推出私人订制方案，为广大企业及个人定制专属香礼。我们有优秀的制香品鉴团队，保证每款香的品质</p>
+                                <p class="price">¥：800</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/order.jpg" alt="">
+                            <div class="info">
+                                <h3><span>木</span>之森科技有限公司定制款（厦门）</h3>
+                                <p>木之森沉香现特推出私人订制方案，为广大企业及个人定制专属香礼。我们有优秀的制香品鉴团队，保证每款香的品质</p>
+                                <p class="price">¥：800</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/order.jpg" alt="">
+                            <div class="info">
+                                <h3><span>木</span>之森科技有限公司定制款（厦门）</h3>
+                                <p>木之森沉香现特推出私人订制方案，为广大企业及个人定制专属香礼。我们有优秀的制香品鉴团队，保证每款香的品质</p>
+                                <p class="price">¥：800</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="link text-left"><a href="">人物详情<img src="images/arrow-right.png" alt=""></a>  </div>
+                </li>
+        </ul>
+        <!--产品介绍 end-->
+        <!--底部-->
+        <div class="bottom">
+            <div class="contact-info">
+                <div class="bottom-top">
+                    <a href=""><img src="images/qq.png" alt=""></a>
+                    <a href=""><img src="images/wx.png" alt=""></a>
+                    <a href=""><img src="images/wl.png" alt=""></a>
+                    <p>Copyright ©2017 www.muzhisen.info. All Right Reserved</p>
+                    <p>闽ICP备：123456789 | 技术支持：南希网站建设</p>
+                </div>
+                <div class="bottom-left">
+                    <div class="logo"><img src="images/logo.png" alt=""></div>
+                    <p>ADD: 厦门市思明区禾祥西路927号</p>
+                    <p>TEL:4000-888-0998 | FAX: 4008880998</p>
+                    <p>Email:service@muzhisen.info</p>
+                </div>
+                <ul class="bottom-right">
+                    <li>
+                        <img src="images/code.png" alt="">
+                        <span>访问手机网站</span>
+                    </li>
+                    <li>
+                        <img src="images/code.png" alt="">
+                        <span>关注微信公众号</span>
+                    </li>
+                    <li>
+                        <img src="images/code.png" alt="">
+                        <span>访问手机商城</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--底部 end-->
+    </div>
+</body>
+
+</html>

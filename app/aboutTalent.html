@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>木之森</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <!-- build:css css/common.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <!-- endbuild -->
+    <!-- build:css css/aboutTalent.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/aboutTalent.css" />
+    <!-- endbuild -->
+</head>
+<body>
+    <div class="employee">
+        <div class="top-left">
+            <h3>招贤纳士</h3>
+            <p>Recruitment</p>
+        </div>
+        <div class="content">
+            <div class="title">
+                <h2>人才理念</h2>
+            </div>
+            <div class="desc">
+                <p>木之森秉承“尊重人才、重视人才”的人才理念，人才战略是新通发展战略的重中之重。</p>
+                <p>通过完善的培训体系、多样的培训课程，提高职业竞争力，</p>
+                <p>并尊重个人的职业发展规划和特性，把人才培养为领域专家、管理型人才等各种丰富的层级。</p>
+                <p>木之森不仅提供职务相关课程，也有管理才能、市场营销等多种培训课程，</p>
+                <p>并且有自己的人才培养计划，有步骤的进行核心人力的培养。</p>
+                <div style="margin-top: 30px;">
+                    <p>木之森致力于营造轻松、自由的发展空间和和谐的工作氛围，组织员工开展多种多样的业余活动，</p>
+                    <p>无穷美妙的精神家园-小小图书馆、最新上映的年度大片、刺激有趣的野外寻宝活动、麦霸们最爱的K歌活动等等，</p>
+                    <p>都是木之森员工常常可以愉悦享受的新通生活。</p>
+                </div>
+            </div>
+            <div class="jobs-wrap">
+                <ul class="jobs">
+                    <li class="job">
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>国学礼仪讲师</dt>
+                                    <dd>招聘部门：<span>10</span>人</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <div>招聘部门：<span>美学馆运营部</span></div>
+                                <div>资历要求：<span>两年工作经验</span></div>
+                                <div>职位性质：<span>全职 </span></div>
+                            </li>
+                            <li>
+                                <div>工作地点：<span>厦门 </span></div>
+                                <div>年龄要求：<span>不限 </span></div>
+                                <div>上班时间：<span>5天/周 7小时/天 </span></div>
+                            </li>
+                            <li>
+                                <div>性别要求：<span>男女不限</span></div>
+                                <div>学历要求：<span>不限</span></div>
+                            </li>
+                        </ul>
+                        <div class="requirement">
+                            <div class="til">详细岗位要求：<span onclick="toggleHide(event)" class="expend">展开﹀</span></div>
+                            <div class="detail hide">
+                                <p>1.就读相关专业，或者相关院校。对国学礼仪有一定相关了解，或认知。热爱传统文化，喜欢传统礼仪，对工作认真负责，做人做事有
+                                礼貌，对工作有激情，有上进心者。。。</p>
+                                <p>2. 语言表达能力强，思维灵活，团队协作意识强做好学员服务，协助其他部门完成相关工作。</p>
+                                <p>3. 热爱教师工作，有亲和力，专业知识功底扎实。</p>
+                                <p>4. 相貌端正，为人亲切，发音标准，热爱中国传统文化，能独立完成国学经典教学授课。</p>
+                                <p>5. 师范类院校本科以上，有幼教或国学经典课程教学经验优先，优秀应届毕业生亦可。</p>
+                                <div class="link"><a href="">申请职位<img src="images/arrow-right.png" alt=""></a></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="pagination" id="pagination">
+                    <li>></li>
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="left">Copyright ©2017 www.muzhisen.info. All Right Reserved</span>
+            <span class="right">闽ICP备：123456789 | 技术支持：南希网站建设</span>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+function toggleHide(event) {
+    var target = event.target;
+    if ($(target).text() == '展开﹀') {
+        $(target).text('收起︿');
+        $(target).parent('.til').siblings('.detail').removeClass('hide');
+    } else {
+        $(target).text('展开﹀');
+        $(target).parent('.til').siblings('.detail').addClass('hide');
+    }
+}
+$('#pagination li').off('click').click(function(event) {
+    if ($(event.target).index() == 0) {
+        var index = $(event.target).siblings('.active').index();
+        if (index < $('#pagination li').length - 2){
+            $(event.target).siblings().eq(index).addClass('active').siblings().removeClass('active')
+        }
+    } else if ($(event.target).index() != 0) {
+        $(event.target).addClass('active').siblings().removeClass('active');
+    }
+})
+</script>
+</html>

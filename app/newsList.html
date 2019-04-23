@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>木之森</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script>
+        // rem
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <!-- build:css css/common.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <!-- endbuild -->
+    <!-- build:css css/newsList.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/newsList.css" />
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="news-list">
+        <div class="page-top">
+            <img class="zsp1" src="images/zsp1.jpg" alt="">
+            <div class="top-info">
+                <div class="logo"><img src="images/logo.png" alt=""></div>
+                <div class="title">
+                    <h2>联系我们<img src="images/icon-partner.png" alt=""></h2>
+                    <p class="sub-title">Membership in a merchant</p>
+                    <div class="links">
+                        <a href="">全部资讯</a>
+                        <a href="">木之森动态</a>
+                        <a href="">佛事展</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-content">
+            <ul class="hot">
+                <li>
+                    <div class="left">
+                        <img src="images/newsP1.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <h3>木之森美学馆</h3>
+                        <h3>书法与艺术品质生活 秦德艺术公开课</h3>
+                        <p>2018年9月8日，由木之森香文化传播有限公司与水鼎美术馆联合主办的“艺由心造 风月古今”秦德艺术公开课——暨秦德艺术作品交流展在木之森美学馆（厦门市帝豪大厦1202）隆重举行。
+                            声不能传于异地，留于异时，于是乎文字生。</p>
+                        <div class="link"><a href="">查看详情<img src="images/arrow-right.png" alt=""></a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <h3>我为书画家秦德老师代言</h3>
+                        <p>艺由心造，风月古今。书画，作为中华民族的优秀文化基因，植根在中国人内心，潜移默化影响着中国人的思想方式和行为方式，学书画，不仅是学写字画画，更是学文化。 </p>
+                        <p> 本次艺术公开课，秦德老师主讲“书法与艺术品质生活”主...</p>
+                        <div class="link"><a href="">查看详情<img src="images/arrow-right.png" alt=""></a></div>
+                    </div>
+                    <div class="right">
+                        <img src="images/newsP2.jpg" alt="">
+                    </div>
+                </li>
+            </ul>
+            <ul class="list">
+                <li>
+                    <div class="inner">
+                        <img class="img" src="images/listp1.jpg" alt="">
+                        <span>香道体验课</span>
+                        <img class="news-icon" src="images/news_icon.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="inner">
+                        <img class="img" src="images/listp1.jpg" alt="">
+                        <span>香道体验课</span>
+                        <img class="news-icon" src="images/news_icon.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="inner">
+                        <img class="img" src="images/listp1.jpg" alt="">
+                        <span>香道体验课</span>
+                        <img class="news-icon" src="images/news_icon.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="inner">
+                        <img class="img" src="images/listp1.jpg" alt="">
+                        <span>香道体验课</span>
+                        <img class="news-icon" src="images/news_icon.png" alt="">
+                    </div>
+                </li>
+            </ul>
+            <ul class="pagination" id="pagination">
+                <li>></li>
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+$('#pagination li').off('click').click(function(event) {
+    if ($(event.target).index() == 0) {
+        var index = $(event.target).siblings('.active').index();
+        if (index < $('#pagination li').length - 2){
+            $(event.target).siblings().eq(index).addClass('active').siblings().removeClass('active')
+        }
+    } else if ($(event.target).index() != 0) {
+        $(event.target).addClass('active').siblings().removeClass('active');
+    }
+})
+</script>
+
+</html>

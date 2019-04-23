@@ -1,0 +1,105 @@
+.master-detail .person-info {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  left: 25%;
+  text-align: center;
+  z-index: 99;
+}
+.master-detail .person-info .name {
+  position: relative;
+  font-size: 44px;
+  color: #fff;
+  letter-spacing: 0.2em;
+}
+.master-detail .person-info .name img {
+  position: absolute;
+}
+.master-detail .person-info .summery {
+  font-size: 16px;
+  color: #fff;
+}
+.master-detail .person-info .summery span {
+  margin-right: 10px;
+}
+.master-detail .introduce {
+  margin-right: 120px;
+  background-color: #eee;
+}
+.master-detail .introduce .inner {
+  position: relative;
+  width: 805px;
+  height: 460px;
+  padding-top: 100px;
+  margin: 0 auto;
+}
+.master-detail .introduce .inner .left {
+  color: #ac793c;
+}
+.master-detail .introduce .inner .left .master {
+  font-size: 30px;
+}
+.master-detail .introduce .inner .left .detail {
+  margin-top: 15px;
+  font-size: 16px;
+}
+.master-detail .introduce .inner .right {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  width: 565px;
+}
+.master-detail .introduce .inner .right .text {
+  height: 355px;
+  overflow: hidden;
+}
+.master-detail .introduce .inner .right .text .til {
+  margin-bottom: 35px;
+  font-size: 36px;
+  color: #333;
+}
+.master-detail .introduce .inner .right .text .text-info {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #777;
+  line-height: 25px;
+}
+.master-detail .introduce .inner .right .b-wrap {
+  margin-top: 20px;
+}
+.master-detail .introduce .inner .right .b-wrap .date {
+  padding-right: 10px;
+  font-size: 14px;
+  color: #888;
+  border-right: 1px solid #888;
+  vertical-align: middle;
+}
+.master-detail .introduce .inner .right .b-wrap a {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #ac793c;
+  vertical-align: middle;
+}
+.master-detail .diproma {
+  width: 805px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #333;
+}
+.master-detail .diproma h3 {
+  margin-top: 40px;
+}
+.master-detail .diproma p {
+  margin-top: 30px;
+  line-height: 27px;
+}
+.master-detail .link {
+  width: 805px;
+  margin: 90px auto;
+}
+.master-detail .link a {
+  margin-right: 60px;
+}
+.master-detail .link a:last-child {
+  margin-right: 0;
+}
